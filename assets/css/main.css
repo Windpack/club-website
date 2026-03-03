@@ -3072,11 +3072,12 @@ input, select, textarea {
 /* Header */
 
 	#header {
-		-moz-transition: background-color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out;
-		background-color: rgb(62, 0, 0);
+		-moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+		background-color: rgba(62, 0, 0, 0.92);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45), 0 4px 24px rgba(0, 0, 0, 0.25);
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
@@ -3166,6 +3167,7 @@ input, select, textarea {
 
 		#header.alt {
 			background-color: transparent;
+			box-shadow: none;
 		}
 
 			#header.alt h1 {

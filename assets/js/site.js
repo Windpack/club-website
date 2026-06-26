@@ -1,4 +1,4 @@
-/* Windpack site interactions — vanilla JS, no dependencies */
+/* Windpack site interactions - vanilla JS, no dependencies */
 (function () {
   "use strict";
 

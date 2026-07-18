@@ -1,0 +1,9 @@
+# Local preview server config (Claude Code)
+.claude/
+
+# Photo-review scratch
+_review/
+
+# Original full-resolution competition media — kept locally, NOT deployed.
+# The website uses the optimized copies in images/competition/ instead.
+images/2026 Competition/

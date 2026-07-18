@@ -1,12 +1,6 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<html lang="en">
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZNSWSX4XGP"></script>
   <script>
@@ -16,173 +10,212 @@
     gtag('config', 'G-ZNSWSX4XGP');
   </script>
 
-  <title>Windpack</title>
-  <link rel="icon" type="image/png" href="images/WWECLogoRed.png">
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <meta name="description" content="Windpack, NC State's team in the DOE Collegiate Wind Competition. We design, build, and test real wind turbines.">
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <style>
-    .features article .image { height: 400px; overflow: hidden; }
-    .features article .image img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Windpack - NC State Collegiate Wind Competition</title>
+  <meta name="description" content="Windpack is NC State's team in the Collegiate Wind Competition. We design, build, and test real wind turbines, from blade to grid." />
+  <link rel="icon" type="image/png" href="images/WWECLogoRed.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="is-preload">
+<body>
 
-<!-- Page Wrapper -->
-<div id="page-wrapper">
-
-  <!-- Header -->
-  <header id="header" class="alt">
-    <h1><a href="index.html">Windpack</a></h1>
-    <nav>
-      <a href="#menu">Menu</a>
-    </nav>
+  <!-- ===== Navbar ===== -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/logo-black.png" alt="Windpack logo">
+        <span class="brand-name">Wind<span>pack</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Home</a>
+        <a href="team.html">Team</a>
+        <a href="turbine.html">Turbine &amp; History</a>
+        <a href="competition.html">Competition</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="join.html" class="nav-join">Join</a>
+      </nav>
+    </div>
   </header>
 
-  <!-- Menu -->
-  <nav id="menu">
-    <div class="inner">
-      <h2>Menu</h2>
-      <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="design.html">Our Turbine</a></li>
-        <li><a href="siting.html">Siting &amp; Dev</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="#" class="close">Close</a>
+  <!-- ===== Hero carousel ===== -->
+  <section class="hero" data-carousel>
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('images/competition/hero-team.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/competition/hero-present.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/competition/hero-plaza.jpg')"></div>
     </div>
-  </nav>
-
-  <!-- Banner -->
-  <section id="banner">
-    <div class="inner">
-      <div class="logo"><span class="icon"><img src="images/WWECLogoRed.png" width="100%" height="auto"></span></div>
-      <h2>This is Windpack</h2>
-      <p>NC State's team in the U.S. Department of Energy <a href="https://www.energy.gov/eere/collegiatewindcompetition/collegiate-wind-competition">Collegiate Wind Competition</a>, designing, building, and testing real wind turbines on a national stage.</p>
+    <button class="hero-arrow prev" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+    <button class="hero-arrow next" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+    <div class="hero-inner">
+      <span class="kicker">NC State · Collegiate Wind Competition</span>
+      <h1>We design, build &amp; test real <em>wind turbines</em>.</h1>
+      <p class="hero-lead">Windpack is NC State's team in the Collegiate Wind Competition, engineering a complete turbine and the business case behind it on a national stage.</p>
+      <div class="btn-row">
+        <a href="join.html" class="btn btn-primary btn-lg">Join the Pack
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="team.html" class="btn btn-ghost btn-lg">Meet the team</a>
+      </div>
     </div>
+    <div class="hero-dots" role="tablist"></div>
   </section>
 
-  <!-- Wrapper -->
-  <section id="wrapper">
-
-    <!-- One -->
-    <section id="one" class="wrapper spotlight style1">
-      <div class="inner">
-        <a href="#" class="image"><img src="images/pic1.jpg" alt="" /></a>
-        <div class="content">
-          <h2 class="major">The Competition</h2>
-          <p>Every year, the U.S. Department of Energy runs a national competition where college teams build a real, working wind turbine from scratch, and make the business case for where to actually put one. Windpack competes in both halves: our engineering teams design and build the turbine itself, while our Site Development team researches real locations, analyzes wind data, and presents a full project plan. NC State vs. the country.</p>
-          <a href="sponsors.html" class="special">Sponsors &amp; background</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Two -->
-    <section id="two" class="wrapper alt spotlight style2">
-      <div class="inner">
-        <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-        <div class="content">
-          <h2 class="major">What We Do</h2>
-          <p>Three specialized teams, Mechanical, Electrical, and Site Development, work in parallel to field a complete turbine system. From blade aerodynamics and drivetrain design to power electronics, data monitoring, and real-world siting analysis, every discipline is on the field.</p>
-          <a href="design.html" class="special">See our turbine</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Three -->
-    <section id="three" class="wrapper spotlight style3">
-      <div class="inner">
-        <a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-        <div class="content">
-          <h2 class="major">Join the Pack</h2>
-          <p>No prior experience required. Whether you're into hands-on fabrication, circuit design, data analysis, or community outreach, there's a place for you here. Come build something real.</p>
-          <a href="contact.html" class="special">Get involved</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Four -->
-    <section id="four" class="wrapper alt style1">
-      <div class="inner">
-        <h2 class="major">Leadership</h2>
-        <p>Meet the people running the show. For the full roster across all three teams, hit the link below.</p>
-
-        <section class="features">
-          <article>
-            <a href="#" class="image"><img src="TeamPics/LukeCaffarey.jpg" alt="Luke Caffarey" /></a>
-            <h3 class="major">Luke Caffarey</h3>
-            <p>President</p>
-            <a href="team.html" class="special">Full team</a>
-          </article>
-          <article>
-            <a href="#" class="image"><img src="TeamPics/SamGray.jpg" alt="" /></a>
-            <h3 class="major">Sam Gray</h3>
-            <p>Project Development Lead</p>
-            <a href="team.html" class="special">Full team</a>
-          </article>
-          <article>
-            <a href="#" class="image"><img src="TeamPics/MaddySchmid.jpg" alt="" /></a>
-            <h3 class="major">Maddy Schmid</h3>
-            <p>Treasurer</p>
-            <a href="team.html" class="special">Full team</a>
-          </article>
-          <article>
-            <a href="#" class="image"><img src="TeamPics/AdelaideHeim.jpg" alt="" /></a>
-            <h3 class="major">Adelaide Heim</h3>
-            <p>Secretary</p>
-            <a href="team.html" class="special">Full team</a>
-          </article>
-        </section>
-        <ul class="actions">
-          <li><a href="team.html" class="button">Browse All</a></li>
-        </ul>
-      </div>
-    </section>
-
-  </section>
-
-  <!-- Footer -->
-  <section id="footer">
-    <div class="inner">
-      <h2 class="major">Get in touch</h2>
-      <p>Questions, sponsorship inquiries, or just want to know more? Email us directly at <a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a> and we'll get back to you.</p>
-      <ul class="contact">
-        <li class="icon solid fa-home">
-          NC State<br />
-          1840 Entrepreneur Dr<br />
-          Raleigh, NC 27606
-        </li>
-        <li class="icon solid fa-phone">(919) 965-6651</li>
-        <li class="icon solid fa-envelope"><a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a></li>
-        <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/company/wolfpack-wind/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BJwILsP7JTsyJqGYfwrEJFQ%3D%3D">LinkedIn</a></li>
-        <li class="icon brands fa-instagram"><a href="https://www.instagram.com/ncstatewind?igsh=MWd0MWNrYmFsdmdxZA==">Instagram</a></li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; NCSU All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
+  <!-- ===== Stats ===== -->
+  <section class="stats">
+    <div class="stats-grid">
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Specialized teams</div></div>
+      <div class="stat"><div class="stat-num">25<span>+</span></div><div class="stat-label">Active members</div></div>
+      <div class="stat"><div class="stat-num">2025</div><div class="stat-label">Club founded</div></div>
+      <div class="stat"><div class="stat-num">1<span>st</span></div><div class="stat-label">Season complete</div></div>
     </div>
   </section>
 
-</div>
+  <!-- ===== About ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="split">
+        <div class="split-media reveal">
+          <img src="images/competition/about-team.jpg" alt="The Windpack team at the 2026 Collegiate Wind Competition" />
+        </div>
+        <div class="split-body reveal">
+          <span class="kicker">Who we are</span>
+          <h2>NC State's wind energy team - student-led, end to end.</h2>
+          <p>Every year, the Collegiate Wind Competition challenges college teams to build a real, working wind turbine from scratch and make the business case for where to put one. Windpack competes in both halves: our engineering teams design and build the turbine itself, while our Project Development team researches real sites, analyzes wind data, and presents a full project plan.</p>
+          <ul class="tick">
+            <li><strong>Mechanical</strong> - blades, drivetrain, and structural design</li>
+            <li><strong>Electrical</strong> - power electronics, controls &amp; data monitoring</li>
+            <li><strong>Project Development</strong> - siting, wind resource &amp; the business case</li>
+          </ul>
+          <div class="btn-row">
+            <a href="turbine.html" class="btn btn-outline">Our turbine &amp; history
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Meeting reminder -->
-<div style="position:fixed;bottom:1.25rem;right:1.25rem;z-index:9999;background:rgba(18,18,28,0.96);border:2px solid #cc2020;border-radius:6px;padding:0.85rem 1.1rem;color:#fff;font-size:0.8rem;text-align:center;line-height:1.7;box-shadow:0 4px 18px rgba(0,0,0,0.55);">
-  <strong style="display:block;font-size:0.88rem;letter-spacing:0.05em;">Weekly Meeting</strong>
-  Tuesdays &bull; 6:00 PM<br>
-  Fitts-Woolard Hall, Rm 2121
-</div>
+  <!-- ===== What we do ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">What we do</span>
+        <h2>Three teams, one turbine</h2>
+        <p>Specialized teams work in parallel to field a complete wind energy system - no prior experience required to start on any of them.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <h3>Mechanical</h3>
+          <p>From blade aerodynamics and 3D-printed hubs to the drivetrain and yaw system, the mechanical team turns CAD into a turbine that survives the wind tunnel.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3>Electrical</h3>
+          <p>Power electronics, generator integration, safety load circuits, and the control system that keeps the turbine producing cleanly across changing wind speeds.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+          <h3>Project Development</h3>
+          <p>Wind resource assessment, site selection, environmental review, financials, and outreach - the full real-world case for building a wind farm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <!-- ===== Instagram ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head ig-head">
+        <div>
+          <span class="kicker">Follow the journey</span>
+          <h2>See what we're building</h2>
+        </div>
+        <a href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @ncstatewind</a>
+      </div>
+      <div class="ig-grid">
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-1.jpg" alt="Windpack at the Collegiate Wind Competition" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-3.jpg" alt="Team photo" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-6.jpg" alt="Presenting to judges" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-5.jpg" alt="Team photo" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-2.jpg" alt="Team dinner" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+        <a class="ig-tile" href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener"><img src="images/competition/ig-8.jpg" alt="Team photo" loading="lazy"><span class="ig-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span></a>
+      </div>
+    </div>
+  </section>
 
+  <!-- ===== CTA ===== -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to join the Pack?</h2>
+      <p>No experience required - just curiosity. Whether you're into hands-on fabrication, circuit design, data analysis, or outreach, there's a place for you at Windpack.</p>
+      <div class="btn-row">
+        <a href="join.html" class="btn btn-ghost btn-lg">Join Windpack</a>
+        <a href="mailto:windpack-org@ncsu.edu" class="btn btn-dark btn-lg">Email us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="brand">
+            <img src="images/logo-outline.png" alt="Windpack logo" style="height:40px">
+            <span class="brand-name">Windpack</span>
+          </a>
+          <p>NC State's team in the Collegiate Wind Competition. Designing, building, and testing real wind turbines.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.linkedin.com/company/wolfpack-wind/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.37-3.9-2.38 0-2.74 1.85-2.74 3.77V24h-4V8z"/></svg></a>
+            <a href="mailto:windpack-org@ncsu.edu" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="team.html">Team</a></li>
+            <li><a href="turbine.html">Turbine &amp; History</a></li>
+            <li><a href="competition.html">Competition</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="join.html">Join</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.repoweringschools.org/collegiate-wind-competition" target="_blank" rel="noopener">About the CWC</a></li>
+            <li><a href="sponsors.html">Become a Sponsor</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get in touch</h4>
+          <ul class="footer-contact">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Fitts-Woolard Hall<br>1840 Entrepreneur Dr, Raleigh, NC 27606</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Windpack · NC State University. All rights reserved.</span>
+        <span>Collegiate Wind Competition</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating meeting badge -->
+  <div class="meet-badge">
+    <button class="mb-close" aria-label="Dismiss">&times;</button>
+    <strong>Weekly Meeting</strong>
+    Tuesdays · 6:00 PM<br>Fitts-Woolard Hall, Rm 2121
+  </div>
+
+  <script src="assets/js/site.js"></script>
 </body>
 </html>

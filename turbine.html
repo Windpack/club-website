@@ -88,6 +88,123 @@
     </div>
   </section>
 
+  <!-- ===== Turbine development, year by year ===== -->
+  <!-- ==========================================================================
+       TO FILL IN: every value marked class="spec-value tbd" is a placeholder.
+       Replace the text and drop the "tbd" class to make it render as real data,
+       e.g.  <span class="spec-value">1.05 m</span>
+
+       TO ADD A YEAR: copy one .tv-tab button and its matching .tv-panel, bump
+       the year, and keep the id/aria-controls pair in sync (tab-2028 / tv-2028).
+       Whichever .tv-tab carries class="active" is the one shown on load.
+       ========================================================================== -->
+  <section class="section" id="development">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Year by year</span>
+        <h2>Turbine development</h2>
+        <p>Every competition cycle we rebuild the turbine around what the last one taught us. Pick a year to see the machine, its specifications, and how it performed.</p>
+      </div>
+
+      <div class="tv" data-turbine-versions>
+        <div class="tv-tabs" role="tablist" aria-label="Turbine by year">
+          <button class="tv-tab active" role="tab" id="tab-2026" aria-controls="tv-2026" aria-selected="true">
+            <span class="tv-tab-year">2026</span>
+            <span class="tv-tab-note">First turbine</span>
+          </button>
+          <button class="tv-tab" role="tab" id="tab-2027" aria-controls="tv-2027" aria-selected="false" tabindex="-1">
+            <span class="tv-tab-year">2027</span>
+            <span class="tv-tab-note">In progress</span>
+          </button>
+        </div>
+
+        <!-- ---------- 2026 ---------- -->
+        <div class="tv-panel active" id="tv-2026" role="tabpanel" aria-labelledby="tab-2026">
+          <div class="tv-top">
+            <div class="tv-media">
+              <!-- Replace with a photo of the 2026 turbine when you have one:
+                   <img src="images/turbines/2026.jpg" alt="The 2026 Windpack turbine"> -->
+              <div class="tv-ph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M9 21h6"/><circle cx="12" cy="11" r="1.6"/><path d="M12 9.4V3"/><path d="M13.4 11.8l5.6 3.2"/><path d="M10.6 11.8L5 15"/></svg>
+                <span>Photo of the 2026 turbine goes here</span>
+              </div>
+            </div>
+            <div class="tv-intro">
+              <span class="tv-status done">Competed May 2026</span>
+              <h3>Our first competition turbine</h3>
+              <p>Designed and built from scratch for our debut at the Collegiate Wind Competition. The Mechanical and Electrical teams carried it from CAD through fabrication and bench testing to wind-tunnel validation at nationals.</p>
+            </div>
+          </div>
+
+          <div class="tv-block">
+            <h4 class="tv-sub">Specifications</h4>
+            <div class="spec-grid">
+              <div class="spec"><span class="spec-label">Rotor diameter</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade airfoil</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade manufacturing</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Hub &amp; pitch</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Rated power</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Cut-in wind speed</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Power electronics</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Braking &amp; safety</span><span class="spec-value tbd">TBD</span></div>
+            </div>
+            <p class="tv-note">We are writing up the full spec sheet and test data from our first build. Numbers land here as they are confirmed.</p>
+          </div>
+
+          <div class="tv-block">
+            <h4 class="tv-sub">Competition results</h4>
+            <div class="spec-grid">
+              <div class="spec"><span class="spec-label">Overall placement</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Turbine contest</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Project development</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Connection creation</span><span class="spec-value tbd">TBD</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- 2027 ---------- -->
+        <div class="tv-panel" id="tv-2027" role="tabpanel" aria-labelledby="tab-2027">
+          <div class="tv-top">
+            <div class="tv-media">
+              <div class="tv-ph">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M9 21h6"/><circle cx="12" cy="11" r="1.6"/><path d="M12 9.4V3"/><path d="M13.4 11.8l5.6 3.2"/><path d="M10.6 11.8L5 15"/></svg>
+                <span>Renders and build photos will appear here as the design comes together</span>
+              </div>
+            </div>
+            <div class="tv-intro">
+              <span class="tv-status wip">In progress</span>
+              <h3>Second-generation turbine</h3>
+              <p>Our 2027 machine is in design now, built directly on what the first one taught us. We are publishing the targets below as they are locked in, then the as-built numbers once it is on the test stand.</p>
+            </div>
+          </div>
+
+          <div class="tv-block">
+            <h4 class="tv-sub">Design targets</h4>
+            <div class="spec-grid">
+              <div class="spec"><span class="spec-label">Rotor diameter</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade airfoil</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Blade manufacturing</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Hub &amp; pitch</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Rated power</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Cut-in wind speed</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Power electronics</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Braking &amp; safety</span><span class="spec-value tbd">TBD</span></div>
+            </div>
+            <p class="tv-note">Want to help decide what goes in these boxes? The design is open and we are recruiting. <a href="join.html">Join the Pack.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== History ===== -->
   <section class="section">
     <div class="container">

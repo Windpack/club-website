@@ -132,37 +132,55 @@
             <div class="tv-intro">
               <span class="tv-status done">Competed May 2026</span>
               <h3>Our first competition turbine</h3>
-              <p>Designed and built from scratch for our debut at the Collegiate Wind Competition. The Mechanical and Electrical teams carried it from CAD through fabrication and bench testing to wind-tunnel validation at nationals.</p>
+              <p>A 45 cm horizontal-axis turbine designed and built from a clean sheet in a single semester, around three principles: modularity, simplicity, and reusability. Three 3D-printed ABS blades on an A18 airfoil drive a direct-coupled D6374 brushless generator, with active collective pitch and a fail-safe three-phase short-circuit brake.</p>
             </div>
           </div>
 
           <div class="tv-block">
-            <h4 class="tv-sub">Specifications</h4>
+            <h4 class="tv-sub">Rotor &amp; mechanical</h4>
             <div class="spec-grid">
-              <div class="spec"><span class="spec-label">Rotor diameter</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade airfoil</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade manufacturing</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Hub &amp; pitch</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Rated power</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Cut-in wind speed</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Power electronics</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Braking &amp; safety</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Configuration</span><span class="spec-value">45 cm HAWT</span></div>
+              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value">3</span></div>
+              <div class="spec"><span class="spec-label">Airfoil</span><span class="spec-value">A18</span></div>
+              <div class="spec"><span class="spec-label">Blade length</span><span class="spec-value">0.18 m</span></div>
+              <div class="spec"><span class="spec-label">Blade material</span><span class="spec-value">3D-printed ABS</span></div>
+              <div class="spec"><span class="spec-label">Hub radius</span><span class="spec-value">0.04 m</span></div>
+              <div class="spec"><span class="spec-label">Pitch system</span><span class="spec-value">Active collective, bevel gear</span></div>
+              <div class="spec"><span class="spec-label">Pitch actuator</span><span class="spec-value">Pololu 499:1 gearmotor</span></div>
+              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value">Direct drive</span></div>
+              <div class="spec"><span class="spec-label">Max rotor speed</span><span class="spec-value">3,500 RPM</span></div>
+              <div class="spec"><span class="spec-label">Tower</span><span class="spec-value">TIG-welded carbon steel</span></div>
+              <div class="spec"><span class="spec-label">Tower natural freq.</span><span class="spec-value">61.2 Hz</span></div>
             </div>
-            <p class="tv-note">We are writing up the full spec sheet and test data from our first build. Numbers land here as they are confirmed.</p>
           </div>
 
           <div class="tv-block">
-            <h4 class="tv-sub">Competition results</h4>
+            <h4 class="tv-sub">Electrical &amp; control</h4>
             <div class="spec-grid">
-              <div class="spec"><span class="spec-label">Overall placement</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Turbine contest</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Project development</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Connection creation</span><span class="spec-value tbd">TBD</span></div>
+              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value">D6374, 150 kV</span></div>
+              <div class="spec"><span class="spec-label">Pole pairs</span><span class="spec-value">7</span></div>
+              <div class="spec"><span class="spec-label">Operating range</span><span class="spec-value">5 to 11 m/s</span></div>
+              <div class="spec"><span class="spec-label">Survival speed</span><span class="spec-value">13 m/s</span></div>
+              <div class="spec"><span class="spec-label">Rectification</span><span class="spec-value">3-phase rectifier</span></div>
+              <div class="spec"><span class="spec-label">Load optimization</span><span class="spec-value">MPPT controller</span></div>
+              <div class="spec"><span class="spec-label">Load sink</span><span class="spec-value">5 &#937;, 250 W resistor</span></div>
+              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value">Arduino Uno R3</span></div>
+              <div class="spec"><span class="spec-label">Telemetry</span><span class="spec-value">INA226 over I&sup2;C</span></div>
+              <div class="spec"><span class="spec-label">Motor driver</span><span class="spec-value">TI L293DNE</span></div>
+              <div class="spec"><span class="spec-label">Isolation</span><span class="spec-value">6N139/138 optocouplers</span></div>
+              <div class="spec"><span class="spec-label">Braking</span><span class="spec-value">3-phase short circuit</span></div>
             </div>
+            <p class="tv-note">The brake is a hardware fail-safe: it needs a constant HIGH signal to stay disengaged, so losing controller power or a broken wire drops the line LOW and shorts all three generator phases automatically, with no software in the loop.</p>
+          </div>
+
+          <div class="tv-block">
+            <h4 class="tv-sub">What we changed, and what we learned</h4>
+            <ul class="tick">
+              <li><strong>PLA to ABS blades</strong> - the first printed blades were too brittle to survive the 13 m/s durability case, so we moved to ABS for its impact resistance and flexural strength.</li>
+              <li><strong>Swashplate to bevel gears</strong> - our first pitch mechanism was a helicopter-style swashplate. It was not rigid enough and did not adapt cleanly to three blades, so we replaced it with a bevel gear set sized to fit the 0.04 m hub.</li>
+              <li><strong>Single-phase to three-phase braking</strong> - shorting one phase caused asymmetric magnetic loading, producing violent torque ripple that threatened the drivetrain. Shorting all three balances the braking torque and removed the mechanical shock.</li>
+              <li><strong>Aborted tunnel run</strong> - in our one wind tunnel slot the rotor vibrated badly on spin-up, so we hit the kill switch rather than risk shattering the hub. We traced it to rotor eccentricity from misaligned 3D-printed parts, which meant we did not complete the MPPT power curve or the high-speed brake test.</li>
+            </ul>
           </div>
 
           <!-- Add each year's documents here. Drop the PDF in assets/reports/
@@ -171,11 +189,11 @@
           <div class="tv-block">
             <h4 class="tv-sub">Documents</h4>
             <div class="doc-list">
-              <a class="doc" href="assets/reports/windpack-2026-technical-inspection.pdf" target="_blank" rel="noopener">
+              <a class="doc" href="assets/reports/windpack-2026-design-report.pdf" target="_blank" rel="noopener">
                 <span class="doc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
                 <span class="doc-body">
-                  <span class="doc-name">2026 Technical Inspection</span>
-                  <span class="doc-meta">Safety and technical compliance review, CWC26 &middot; PDF, 510 KB</span>
+                  <span class="doc-name">2026 Turbine Design Report</span>
+                  <span class="doc-meta">Full technical design, analysis, and testing writeup, CWC26 &middot; PDF, 1.7 MB</span>
                 </span>
                 <span class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
               </a>

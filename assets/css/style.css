@@ -247,6 +247,8 @@ strong{color:var(--ink);font-weight:700}
 /* embed (forms) */
 .embed-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
 .embed-card iframe{display:block;width:100%;border:0}
+.cal-embed{height:700px}
+@media (max-width:640px){.cal-embed{height:560px}}
 
 /* contact list */
 .contact-list{list-style:none;display:grid;gap:18px}

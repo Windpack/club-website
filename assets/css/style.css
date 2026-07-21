@@ -300,6 +300,26 @@ strong{color:var(--ink);font-weight:700}
 .spec-value{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.35}
 .spec-value.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;font-size:.88rem;color:#b2b2ba}
 
+.doc-list{display:grid;gap:12px}
+.doc{
+  display:flex;align-items:center;gap:16px;padding:15px 20px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);
+  transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.doc:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:var(--shadow)}
+.doc-ic{
+  flex:0 0 auto;width:42px;height:42px;border-radius:9px;
+  background:var(--red-tint);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+}
+.doc-ic svg{width:20px;height:20px}
+.doc-body{flex:1;min-width:0}
+.doc-name{display:block;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:1rem}
+.doc-meta{display:block;font-size:.79rem;color:var(--muted);margin-top:3px}
+.doc-dl{flex:0 0 auto;color:#b6b6bd;transition:color .2s var(--ease)}
+.doc-dl svg{width:20px;height:20px}
+.doc:hover .doc-dl{color:var(--red)}
+
 .tv-note{
   margin-top:18px;padding:14px 18px;border-left:3px solid var(--red);
   background:var(--bg-alt);border-radius:0 8px 8px 0;

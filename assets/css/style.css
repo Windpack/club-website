@@ -244,6 +244,95 @@ strong{color:var(--ink);font-weight:700}
 .tier li{padding-left:26px;position:relative;font-size:.95rem;color:var(--ink-soft)}
 .tier li::before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23cc0000' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");background-size:contain;background-repeat:no-repeat}
 
+/* ---------- Turbine development (year tabs) ---------- */
+.tv-tabs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px}
+.tv-tab{
+  display:flex;flex-direction:column;align-items:flex-start;gap:3px;
+  background:#fff;border:1.5px solid var(--line);border-radius:10px;
+  padding:13px 22px;cursor:pointer;min-width:136px;text-align:left;
+  font-family:'Montserrat',sans-serif;transition:all .2s var(--ease);
+}
+.tv-tab:hover{border-color:#c7c7ce;transform:translateY(-2px)}
+.tv-tab-year{font-size:1.3rem;font-weight:800;color:var(--ink);line-height:1.1}
+.tv-tab-note{font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.tv-tab.active{background:var(--red);border-color:var(--red);box-shadow:0 10px 24px rgba(204,0,0,.22)}
+.tv-tab.active .tv-tab-year,.tv-tab.active .tv-tab-note{color:#fff}
+.tv-panel{display:none}
+.tv-panel.active{display:block;animation:tvIn .45s var(--ease)}
+@keyframes tvIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.tv-top{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:46px}
+.tv-media img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow-lg)}
+.tv-ph{
+  aspect-ratio:4/3;border:1.5px dashed #d5d5db;border-radius:var(--radius);
+  background:var(--bg-alt);color:#a6a6ae;text-align:center;padding:26px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+}
+.tv-ph svg{width:36px;height:36px}
+.tv-ph span{font-size:.85rem;line-height:1.55;max-width:28ch}
+.tv-status{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:15px;
+  font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.1em;padding:6px 14px;border-radius:20px;
+}
+.tv-status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.tv-status.done{background:var(--red-tint);color:var(--red-dark)}
+.tv-status.wip{background:#fff3dd;color:#8a5800}
+.tv-intro h3{font-size:1.6rem;margin-bottom:12px}
+.tv-intro p{color:var(--ink-soft)}
+
+.tv-block{margin-bottom:46px}
+.tv-block:last-child{margin-bottom:0}
+.tv-sub{
+  display:flex;align-items:center;gap:14px;margin:0 0 20px;
+  font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--red);
+}
+.tv-sub::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.spec-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;
+}
+.spec{background:#fff;padding:16px 18px}
+.spec-label{display:block;font-size:.67rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
+.spec-value{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.35}
+.spec-value.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;font-size:.88rem;color:#b2b2ba}
+
+.tv-result{display:flex;align-items:center;gap:24px;background:var(--red-tint);border:1px solid #f3d0d0;border-radius:var(--radius);padding:22px 28px}
+.tv-result-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:2.9rem;color:var(--red);line-height:1;white-space:nowrap}
+.tv-result-num span{font-size:1.15rem;vertical-align:super;margin-left:1px}
+.tv-result-txt{display:flex;flex-direction:column;gap:4px}
+.tv-result-txt strong{font-family:'Montserrat',sans-serif;font-size:1.06rem;color:var(--ink)}
+.tv-result-txt span{color:var(--muted);font-size:.95rem}
+
+.doc-list{display:grid;gap:12px}
+.doc{
+  display:flex;align-items:center;gap:16px;padding:15px 20px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius);
+  transition:transform .2s var(--ease),border-color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.doc:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:var(--shadow)}
+.doc-ic{
+  flex:0 0 auto;width:42px;height:42px;border-radius:9px;
+  background:var(--red-tint);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+}
+.doc-ic svg{width:20px;height:20px}
+.doc-body{flex:1;min-width:0}
+.doc-name{display:block;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:1rem}
+.doc-meta{display:block;font-size:.79rem;color:var(--muted);margin-top:3px}
+.doc-dl{flex:0 0 auto;color:#b6b6bd;transition:color .2s var(--ease)}
+.doc-dl svg{width:20px;height:20px}
+.doc:hover .doc-dl{color:var(--red)}
+
+.tv-note{
+  margin-top:18px;padding:14px 18px;border-left:3px solid var(--red);
+  background:var(--bg-alt);border-radius:0 8px 8px 0;
+  font-size:.92rem;color:var(--muted);
+}
+
 /* embed (forms) */
 .embed-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
 .embed-card iframe{display:block;width:100%;border:0}
@@ -315,6 +404,8 @@ strong{color:var(--ink);font-weight:700}
   .ig-grid{grid-template-columns:repeat(4,1fr)}
   .info-grid,.tier-grid{grid-template-columns:1fr}
   .hero-arrow{display:none}
+  .tv-top{grid-template-columns:1fr;gap:30px}
+  .spec-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:640px){
   body{font-size:16px}
@@ -329,6 +420,9 @@ strong{color:var(--ink);font-weight:700}
   .footer-grid{grid-template-columns:1fr}
   .stat{padding:34px 16px}
   .stat-num{font-size:2.2rem}
+  .spec-grid{grid-template-columns:1fr}
+  .tv-tab{flex:1 1 auto;min-width:0;padding:12px 16px}
+  .tv-intro h3{font-size:1.35rem}
 }
 @media (max-width:420px){
   .team-grid{grid-template-columns:1fr}

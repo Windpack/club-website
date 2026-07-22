@@ -63,6 +63,39 @@
     start();
   }
 
+  /* ---- Turbine development year tabs ---- */
+  var tv = document.querySelector("[data-turbine-versions]");
+  if (tv) {
+    var tvTabs = Array.prototype.slice.call(tv.querySelectorAll(".tv-tab"));
+    var tvPanels = Array.prototype.slice.call(tv.querySelectorAll(".tv-panel"));
+
+    var selectYear = function (idx) {
+      tvTabs.forEach(function (t, i) {
+        var on = i === idx;
+        t.classList.toggle("active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.setAttribute("tabindex", on ? "0" : "-1");
+      });
+      tvPanels.forEach(function (p, i) { p.classList.toggle("active", i === idx); });
+    };
+
+    tvTabs.forEach(function (t, i) {
+      t.addEventListener("click", function () { selectYear(i); });
+      t.addEventListener("keydown", function (e) {
+        var step = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+        if (!step) return;
+        e.preventDefault();
+        var n = (i + step + tvTabs.length) % tvTabs.length;
+        tvTabs[n].focus();
+        selectYear(n);
+      });
+    });
+
+    // Respect whichever tab is marked active in the HTML
+    var startAt = tvTabs.indexOf(tv.querySelector(".tv-tab.active"));
+    selectYear(startAt < 0 ? 0 : startAt);
+  }
+
   /* ---- Reveal on scroll ---- */
   var reveals = document.querySelectorAll(".reveal");
   if (reveals.length && "IntersectionObserver" in window) {

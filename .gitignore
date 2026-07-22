@@ -4,6 +4,9 @@
 # Photo-review scratch
 _review/
 
-# Original full-resolution competition media — kept locally, NOT deployed.
+# Original full-resolution competition media, kept locally, NOT deployed.
 # The website uses the optimized copies in images/competition/ instead.
 images/2026 Competition/
+
+# Scratch folder used while building the sponsorship PDF
+tools/_tmp/

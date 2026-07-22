@@ -300,6 +300,13 @@ strong{color:var(--ink);font-weight:700}
 .spec-value{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.35}
 .spec-value.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;font-size:.88rem;color:#b2b2ba}
 
+.tv-result{display:flex;align-items:center;gap:24px;background:var(--red-tint);border:1px solid #f3d0d0;border-radius:var(--radius);padding:22px 28px}
+.tv-result-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:2.9rem;color:var(--red);line-height:1;white-space:nowrap}
+.tv-result-num span{font-size:1.15rem;vertical-align:super;margin-left:1px}
+.tv-result-txt{display:flex;flex-direction:column;gap:4px}
+.tv-result-txt strong{font-family:'Montserrat',sans-serif;font-size:1.06rem;color:var(--ink)}
+.tv-result-txt span{color:var(--muted);font-size:.95rem}
+
 .doc-list{display:grid;gap:12px}
 .doc{
   display:flex;align-items:center;gap:16px;padding:15px 20px;background:#fff;

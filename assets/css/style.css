@@ -300,6 +300,35 @@ strong{color:var(--ink);font-weight:700}
 .spec-value{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.35}
 .spec-value.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;font-size:.88rem;color:#b2b2ba}
 
+/* ---------- Season schedule ---------- */
+.sched{max-width:880px;margin:0 auto}
+.sched-phase{margin-bottom:42px}
+.sched-phase:last-child{margin-bottom:0}
+.sched-phase-title{
+  display:flex;align-items:center;gap:14px;margin:0 0 18px;
+  font-family:'Montserrat',sans-serif;font-size:.76rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.14em;color:var(--red);
+}
+.sched-phase-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.sched-item{
+  display:grid;grid-template-columns:128px 1fr;gap:26px;align-items:start;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;margin-bottom:12px;
+  transition:border-color .2s var(--ease),transform .2s var(--ease),box-shadow .2s var(--ease);
+}
+.sched-item:last-child{margin-bottom:0}
+.sched-item:hover{border-color:var(--red);transform:translateY(-2px);box-shadow:var(--shadow)}
+.sched-date{font-family:'Montserrat',sans-serif;font-weight:800;color:var(--ink);font-size:.98rem;line-height:1.35}
+.sched-date.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;color:#b2b2ba;font-size:.9rem}
+.sched-body h4{font-family:'Montserrat',sans-serif;font-size:1.04rem;color:var(--ink);margin-bottom:5px}
+.sched-body p{font-size:.93rem;color:var(--muted);margin:0 0 11px}
+.sched-tag{
+  display:inline-block;font-family:'Montserrat',sans-serif;font-size:.62rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.09em;padding:4px 11px;border-radius:20px;
+  background:var(--red-tint);color:var(--red-dark);
+}
+.sched-tag.all{background:var(--bg-alt);color:var(--muted)}
+
 .tv-result{display:flex;align-items:center;gap:24px;background:var(--red-tint);border:1px solid #f3d0d0;border-radius:var(--radius);padding:22px 28px}
 .tv-result-num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:2.9rem;color:var(--red);line-height:1;white-space:nowrap}
 .tv-result-num span{font-size:1.15rem;vertical-align:super;margin-left:1px}
@@ -423,6 +452,9 @@ strong{color:var(--ink);font-weight:700}
   .spec-grid{grid-template-columns:1fr}
   .tv-tab{flex:1 1 auto;min-width:0;padding:12px 16px}
   .tv-intro h3{font-size:1.35rem}
+  .sched-item{grid-template-columns:1fr;gap:9px}
+  .tv-result{gap:18px;padding:20px}
+  .tv-result-num{font-size:2.3rem}
 }
 @media (max-width:420px){
   .team-grid{grid-template-columns:1fr}

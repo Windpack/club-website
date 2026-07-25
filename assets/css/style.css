@@ -300,6 +300,22 @@ strong{color:var(--ink);font-weight:700}
 .spec-value{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--ink);font-size:.97rem;line-height:1.35}
 .spec-value.tbd{font-family:'Inter',sans-serif;font-weight:500;font-style:italic;font-size:.88rem;color:#b2b2ba}
 
+/* ---------- Org chart (mermaid) ---------- */
+.orgchart{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:34px 24px;overflow-x:auto;
+}
+.orgchart .mermaid{margin:0;text-align:center;font-family:'Inter',sans-serif}
+.orgchart .mermaid:not([data-processed]){visibility:hidden;min-height:420px}
+/* The chart is natively ~2566px wide. Letting it shrink to fit drops label text
+   to ~7px, so hold a legible floor and let the card scroll instead. */
+.orgchart svg{min-width:1700px;height:auto;display:block;margin:0 auto}
+.orgchart-hint{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  margin-top:14px;font-size:.82rem;color:var(--muted);
+}
+.orgchart-hint svg{width:15px;height:15px;flex:0 0 auto}
+
 /* ---------- Season schedule ---------- */
 .sched{max-width:880px;margin:0 auto}
 .sched-phase{margin-bottom:42px}

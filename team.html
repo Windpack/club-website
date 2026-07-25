@@ -212,6 +212,82 @@
     </div>
   </main>
 
+  <!-- ===== Org chart ===== -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="kicker">How we're organized</span>
+        <h2>Team structure</h2>
+        <p>From the officer board down through our engineering and project divisions, here's how the work is divided.</p>
+      </div>
+      <div class="orgchart">
+        <pre class="mermaid">
+flowchart TD
+    %% ============ NODES ============
+    OB["🏛️ OFFICER BOARD"]:::board
+
+    ED["Engineering Director"]:::director
+    PD["Project Director"]:::director
+
+    OB ==&gt; ED
+    OB ==&gt; PD
+
+    %% ---- Engineering Division ----
+    subgraph ENG [" ⚙️ Engineering Division "]
+        direction TB
+        ML["Mechanical Lead"]:::lead
+        EL["Electrical Lead"]:::lead
+
+        AB["Aero &amp; Blade"]:::head
+        DN["Driveshaft &amp; Nacelle"]:::head
+        TS["Tower &amp; Structure"]:::head
+        CI["Controls &amp; Instrumentation"]:::head
+        PG["Power &amp; Generator"]:::head
+
+        ML --&gt; AB
+        ML --&gt; DN
+        ML --&gt; TS
+        EL --&gt; CI
+        EL --&gt; PG
+    end
+
+    %% ---- Project Division ----
+    subgraph PRJ [" 🗺️ Project Division — Wind Farm Development "]
+        direction TB
+        SA["Site Assessment &amp; Resource"]:::head
+        EP["Environmental &amp; Permitting"]:::head
+        GI["Grid Interconnection"]:::head
+        SL["Supply Chain &amp; Logistics"]:::head
+    end
+
+    ED --&gt; ML
+    ED --&gt; EL
+    PD --&gt; SA
+    PD --&gt; EP
+    PD --&gt; GI
+    PD --&gt; SL
+
+    %% ============ STYLES ============
+    classDef board fill:#111111,stroke:#C8102E,stroke-width:3px,color:#FFFFFF,font-size:16px,font-weight:bold
+    classDef director fill:#C8102E,stroke:#111111,stroke-width:2px,color:#FFFFFF,font-weight:bold
+    classDef lead fill:#FFFFFF,stroke:#C8102E,stroke-width:2.5px,color:#111111,font-weight:bold
+    classDef head fill:#F4F4F4,stroke:#111111,stroke-width:1.5px,color:#111111
+
+    style ENG fill:#FFFFFF,stroke:#C8102E,stroke-width:2px,stroke-dasharray:6 4,color:#C8102E
+    style PRJ fill:#FFFFFF,stroke:#111111,stroke-width:2px,stroke-dasharray:6 4,color:#111111
+
+    linkStyle default stroke:#111111,stroke-width:2px
+    linkStyle 0,1 stroke:#C8102E,stroke-width:3px
+        </pre>
+      </div>
+      <p class="orgchart-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Scroll the chart sideways to see the full structure
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </p>
+    </div>
+  </section>
+
   <!-- ===== CTA ===== -->
   <section class="cta">
     <div class="container">
@@ -289,5 +365,16 @@
   </footer>
 
   <script src="assets/js/site.js"></script>
+
+  <!-- Org chart rendering. The diagram source lives in the .mermaid block above. -->
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.16.0/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: true,
+      securityLevel: 'strict',
+      theme: 'base',
+      fontFamily: "'Inter',-apple-system,'Segoe UI',Helvetica,Arial,sans-serif"
+    });
+  </script>
 </body>
 </html>

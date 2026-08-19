@@ -1,27 +1,36 @@
-What's up Part 2:
-Great work on the colors, now here's a new, refocused list of things that gotta happen.
+# Windpack Club Website
 
-P.S. I would create a issue on github whenever you start a task, then when you finish it. Just so it's easier for a group of people working on it.
-GOALS:
+Official website for **Windpack**, NC State University's team in the Collegiate Wind Competition.
 
-1. Organize the pages:  (Just make sure all link correctly and change the old ones in the github repository to "elementsARCHIVED"
--Home -- Finished
--About (includes what we do, that we compete in CWC, and our short history)  -- Finished
--Our team. One main page with three links to our three teams: (Mechanical, Electrical, Site Development) Then on the team pages, everyone gets their own spot. -- WIP
--Competition. Short Description of the competition. -- Finished
--Join us link that links to this google form (THIS LINK IS FOR EDITORS-NOT POTENTIAL MEMBERS) 
-    - https://docs.google.com/forms/d/1yVo103SPv000tlanYF1Biw337JqTVMYz3yi0SuTDKZ0/edit
--Support us (Industry Sponsors will be very important for us) We will have to include a "Sponsor Packet" later on
+Visit the live site at [windpack.club](https://windpack.club).
 
-2. Fix the page's wording (get rid of any latin)
+## About Windpack
 
-3. Fix title (Description in Issues)
+Windpack is a student-led team that designs, builds, and tests a wind turbine while developing the real-world case for a wind energy project. Members contribute through three groups:
 
-4. Fix menu bar color (Description in Issues) -- Finished
+- **Mechanical** — blades, drivetrain, nacelle, and structural design
+- **Electrical** — power electronics, controls, instrumentation, and data monitoring
+- **Project Development** — site assessment, wind resources, environmental review, financial analysis, and outreach
 
-Also if you think its better to scrap the HTML website and switch over to wordpress/smth else, experiment with it. YOU (calvin & aiden) got this!! I'm counting on you guys
+No previous wind-energy experience is required to join.
 
-Luke
+## Website structure
+
+The site is built with static HTML, CSS, and vanilla JavaScript and is hosted with GitHub Pages.
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Homepage and overview |
+| `team.html` | Member profiles and team structure |
+| `turbine.html` | Turbine development and club history |
+| `competition.html` | Collegiate Wind Competition overview |
+| `events.html` | Meetings, events, and embedded calendar |
+| `sponsors.html` | Sponsorship information and resources |
+| `join.html` | Recruitment information and interest form |
+| `assets/css/style.css` | Current site styles |
+| `assets/js/site.js` | Navigation, carousel, tabs, and other interactions |
+| `images/` | Logos, competition photos, and shared site images |
+| `TeamPics/` | Member headshots used on the team page
 
 Solid State by HTML5 UP
 html5up.net | @ajlkn

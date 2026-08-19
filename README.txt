@@ -30,7 +30,7 @@ The site is built with static HTML, CSS, and vanilla JavaScript and is hosted wi
 | `assets/css/style.css` | Current site styles |
 | `assets/js/site.js` | Navigation, carousel, tabs, and other interactions |
 | `images/` | Logos, competition photos, and shared site images |
-| `TeamPics/` | Member headshots used on the team page
+| `TeamPics/` | Member headshots used on the team page |
 
 Solid State by HTML5 UP
 html5up.net | @ajlkn

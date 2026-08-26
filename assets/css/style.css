@@ -478,9 +478,11 @@ strong{color:var(--ink);font-weight:700}
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 
-/* floating meeting badge */
+/* floating applications badge */
 .meet-badge{position:fixed;bottom:20px;right:20px;z-index:900;background:var(--bg-dark);color:#fff;border-radius:12px;padding:14px 18px;box-shadow:var(--shadow-lg);font-size:.8rem;line-height:1.5;border-left:4px solid var(--red);max-width:230px}
 .meet-badge strong{display:block;color:#fff;font-family:'Montserrat';text-transform:uppercase;letter-spacing:.06em;font-size:.8rem;margin-bottom:3px}
+.meet-badge a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.meet-badge a:hover{color:var(--red)}
 .meet-badge .mb-close{position:absolute;top:6px;right:9px;color:rgba(255,255,255,.5);cursor:pointer;font-size:1rem;line-height:1;background:none;border:0}
 .meet-badge .mb-close:hover{color:#fff}
 

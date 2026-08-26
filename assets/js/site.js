@@ -109,7 +109,7 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---- Dismissible meeting badge ---- */
+  /* ---- Dismissible applications badge ---- */
   var badge = document.querySelector(".meet-badge");
   if (badge) {
     if (sessionStorage.getItem("hideMeet") === "1") {

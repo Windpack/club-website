@@ -1,0 +1,8 @@
+# windpack.club - NC State Collegiate Wind Competition team
+# Everything here is public. The 404 page carries its own noindex tag,
+# so it is deliberately left crawlable rather than blocked here.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://windpack.club/sitemap.xml

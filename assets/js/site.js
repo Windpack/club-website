@@ -122,6 +122,43 @@
     });
   }
 
+  /* ---- Sponsorship tier stack: progress rail ---- */
+  var stackCards = document.querySelector(".stack-cards");
+  if (stackCards) {
+    var tiers = [].slice.call(stackCards.querySelectorAll(".stier"));
+    var marks = [].slice.call(document.querySelectorAll(".stack-rail-marks li"));
+    var fill = document.querySelector(".stack-rail-fill");
+    var queued = false;
+
+    function paintRail() {
+      queued = false;
+      var active = 0;
+      for (var i = 0; i < tiers.length; i++) {
+        // A tier is "reached" once it has settled at its own sticky offset.
+        var pin = parseFloat(window.getComputedStyle(tiers[i]).top) || 0;
+        if (tiers[i].getBoundingClientRect().top <= pin + 6) active = i;
+      }
+      for (var j = 0; j < marks.length; j++) {
+        marks[j].classList.toggle("is-active", j === active);
+      }
+      if (fill) fill.style.height = ((active + 1) / tiers.length) * 100 + "%";
+    }
+    var raf = window.requestAnimationFrame || function (fn) { return setTimeout(fn, 16); };
+    function queueRail() {
+      if (!queued) { queued = true; raf(paintRail); }
+    }
+    if (tiers.length) {
+      window.addEventListener("scroll", queueRail, { passive: true });
+      window.addEventListener("resize", queueRail);
+      // Re-run once images have settled and after any scroll restoration.
+      window.addEventListener("load", paintRail);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) paintRail();
+      });
+      paintRail();
+    }
+  }
+
   /* ---- Current year in footer ---- */
   var yr = document.querySelector("[data-year]");
   if (yr) yr.textContent = new Date().getFullYear();

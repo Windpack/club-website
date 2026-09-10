@@ -58,7 +58,7 @@
       <div class="btn-row">
         <a href="join.html" class="btn btn-primary btn-lg">Join the Pack
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        <a href="team.html" class="btn btn-ghost btn-lg">Meet the team</a>
+        <a href="team.html" class="btn btn-link btn-lg">Meet the team</a>
       </div>
     </div>
     <div class="hero-dots" role="tablist"></div>
@@ -100,30 +100,60 @@
   </section>
 
   <!-- ===== What we do ===== -->
-  <section class="section section--alt">
+  <section class="section section--alt" id="what-we-do">
     <div class="container">
-      <div class="section-head center">
-        <span class="kicker">What we do</span>
-        <h2>Three teams, one turbine</h2>
-        <p>Specialized teams work in parallel to field a complete wind energy system - no prior experience required to start on any of them.</p>
+      <div class="section-head dsc-head">
+        <div>
+          <span class="kicker">What we do</span>
+          <h2>Three teams, one turbine</h2>
+        </div>
+        <p>Every part of a wind project, built by students in parallel: the machine itself, the power electronics that tame it, and the real-world case for putting one in the ground. No experience needed to start on any of them.</p>
       </div>
-      <div class="cards">
-        <div class="card reveal">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
-          <h3>Mechanical</h3>
-          <p>From blade aerodynamics and 3D-printed hubs to the drivetrain and yaw system, the mechanical team turns CAD into a turbine that survives the wind tunnel.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <h3>Electrical</h3>
-          <p>Power electronics, generator integration, safety load circuits, and the control system that keeps the turbine producing cleanly across changing wind speeds.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-          <h3>Project Development</h3>
-          <p>Wind resource assessment, site selection, environmental review, financials, and outreach - the full real-world case for building a wind farm.</p>
-        </div>
-      </div>
+
+      <ol class="dsc-list">
+        <li class="dsc reveal">
+          <a class="dsc-link" href="team.html#team-mechanical">
+            <span class="dsc-num" aria-hidden="true">01</span>
+            <div class="dsc-body">
+              <h3>Mechanical <svg class="dsc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+              <p>Blade aerodynamics, 3D-printed hubs, the drivetrain, and the yaw and pitch systems. This is where CAD becomes a machine that has to survive a wind tunnel.</p>
+            </div>
+            <ul class="dsc-subs">
+              <li>Aero &amp; Blades</li>
+              <li>Nacelle &amp; Driveshaft</li>
+              <li>Pitch</li>
+            </ul>
+          </a>
+        </li>
+        <li class="dsc reveal">
+          <a class="dsc-link" href="team.html#team-electrical">
+            <span class="dsc-num" aria-hidden="true">02</span>
+            <div class="dsc-body">
+              <h3>Electrical <svg class="dsc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+              <p>Power electronics, generator integration, and safety load circuits, plus the control system that keeps the turbine producing cleanly as the wind changes underneath it.</p>
+            </div>
+            <ul class="dsc-subs">
+              <li>Controls &amp; Instrumentation</li>
+              <li>Power &amp; Generator</li>
+            </ul>
+          </a>
+        </li>
+        <li class="dsc reveal">
+          <a class="dsc-link" href="team.html#team-project-development">
+            <span class="dsc-num" aria-hidden="true">03</span>
+            <div class="dsc-body">
+              <h3>Project Development <svg class="dsc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></h3>
+              <p>Wind resource assessment, site selection, environmental review, financial modelling, and community outreach: the full case for building a wind farm, not just a turbine.</p>
+            </div>
+            <ul class="dsc-subs">
+              <li>Site Assessment</li>
+              <li>Environmental &amp; Permitting</li>
+              <li>Grid Interconnection</li>
+              <li>Supply Chain</li>
+            </ul>
+          </a>
+        </li>
+      </ol>
     </div>
   </section>
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Join | Windpack</title>
-  <meta name="description" content="Join Windpack - NC State's Collegiate Wind Competition team. All majors welcome, no experience required. Sign up and apply for a team." />
+  <title>Internal | Windpack</title>
+  <meta name="description" content="Windpack member links: Notion, Slack, Google Drive, and the team calendar. NC State's Collegiate Wind Competition team." />
   <link rel="icon" type="image/png" href="images/WWECLogoRed.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,78 +26,83 @@
         <a href="team.html">Team</a>
         <a href="turbine.html">Turbine &amp; History</a>
         <a href="competition.html">Competition</a>
-        <a href="internal.html">Internal</a>
+        <a href="internal.html" class="active">Internal</a>
         <a href="sponsors.html">Sponsors</a>
-        <a href="join.html" class="nav-join active">Join</a>
+        <a href="join.html" class="nav-join">Join</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Page hero ===== -->
-  <section class="page-hero" style="background-image:linear-gradient(rgba(12,12,14,.45),rgba(12,12,14,.55)),url('images/competition/hero-team.jpg')">
-    <div class="container">
-      <span class="kicker">Get involved</span>
-      <h1>Join the Pack</h1>
-      <p>All majors, all experience levels. If you're curious about wind energy, hands-on engineering, or project development - there's a spot for you.</p>
-    </div>
-  </section>
-
-  <!-- ===== Who can join ===== -->
+  <!-- ===== Links ===== -->
   <section class="section">
     <div class="container">
-      <div class="section-head center">
-        <span class="kicker">Who can join</span>
-        <h2>No experience required - just show up</h2>
-        <p>We welcome students from every college and year. Pick the team that excites you, or try a few until something clicks.</p>
+      <!-- Most of these need a Windpack login. To add or swap a link, copy one
+           .doc block below. Logos live in images/brands/. -->
+      <div class="doc-list doc-grid">
+        <a class="doc" href="https://www.notion.so/f5a0568856c882fa88f681ee310973cd" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/notion.svg" alt="">
+          <span class="doc-body"><span class="doc-name">Notion</span></span>
+        </a>
+        <a class="doc" href="https://www.notion.so/13b0568856c882e3b41c0169187968a0" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/notion.svg" alt="">
+          <span class="doc-body"><span class="doc-name">New Member Guide</span></span>
+        </a>
+        <a class="doc" href="https://windpack.slack.com" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/slack.svg" alt="">
+          <span class="doc-body"><span class="doc-name">Slack</span></span>
+        </a>
+        <a class="doc" href="https://drive.google.com/drive/folders/0AHBSFbAQNFF3Uk9PVA" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/google-drive.svg" alt="">
+          <span class="doc-body"><span class="doc-name">Google Drive</span></span>
+        </a>
+        <a class="doc" href="#calendar">
+          <img class="doc-logo" src="images/brands/google-calendar.svg" alt="">
+          <span class="doc-body"><span class="doc-name">Calendar</span></span>
+        </a>
+        <a class="doc" href="Rules26.pdf" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/repowering-schools.png" alt="">
+          <span class="doc-body"><span class="doc-name">CWC 2026 Rules</span></span>
+        </a>
+        <a class="doc" href="https://github.com/Windpack/club-website" target="_blank" rel="noopener">
+          <img class="doc-logo" src="images/brands/github.svg" alt="">
+          <span class="doc-body"><span class="doc-name">GitHub</span></span>
+        </a>
+        <a class="doc" href="mailto:windpack-org@ncsu.edu">
+          <img class="doc-logo" src="images/brands/gmail.svg" alt="">
+          <span class="doc-body"><span class="doc-name">Club Email</span></span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== Sign up form ===== -->
-  <section class="section section--alt">
+  <!-- ===== Calendar ===== -->
+  <section class="section section--alt" id="calendar">
     <div class="container">
       <div class="section-head center">
-        <span class="kicker">Step one</span>
-        <h2>Sign up</h2>
-        <p>Fill out the form below and we'll add you to our roster and announcements. Prefer a new tab? <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener">Open the form directly</a>.</p>
+        <h2>Windpack calendar</h2>
       </div>
-      <div class="embed-card" style="max-width:820px;margin:0 auto">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTdRE50ByRVR9bEHnr4Voct58K5T4bUYhn58HaiXguzXJNeA/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Windpack signup form">Loading…</iframe>
+
+      <!-- Shared Google Calendar (windpack-org@ncsu.edu). Officers with edit
+           access add events in Google Calendar and they appear here automatically.
+           To swap calendars, replace the src= ID below. -->
+      <div class="embed-card" style="max-width:940px;margin:0 auto">
+        <iframe class="cal-embed" title="Windpack calendar" scrolling="no"
+          src="https://calendar.google.com/calendar/embed?src=windpack-org%40ncsu.edu&amp;ctz=America%2FNew_York&amp;mode=MONTH&amp;showTitle=0&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;showTz=1"></iframe>
       </div>
-      <div class="btn-row" style="justify-content:center;margin-top:28px">
-        <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Open signup form
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
+      <p class="center" style="color:var(--muted);font-size:.92rem;margin-top:20px">All times Eastern. Add to your own calendar:
+        <a href="https://calendar.google.com/calendar/u/0?cid=d2luZHBhY2stb3JnQG5jc3UuZWR1" target="_blank" rel="noopener"><strong>Windpack at NC State</strong></a> ·
+        <a href="https://calendar.google.com/calendar/u/0?cid=Y18wZDgxN2U0YzYwNTA3NDA0YmFmOGExODQyMzEyNmNmMjAxM2FmMmJjODkyZDIwYjM1YTZhMTMzZmM0ODY2ZTFlQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener"><strong>Engineering Deadlines</strong></a></p>
     </div>
   </section>
 
-  <!-- ===== Apply this year ===== -->
-  <section class="section">
+  <!-- ===== CTA ===== -->
+  <section class="cta">
     <div class="container">
-      <div class="split">
-        <div class="split-body reveal">
-          <span class="kicker">Step two</span>
-          <h2>Team applications are closed</h2>
-          <p>Applications for this season closed on Friday, Sept 4. Thanks to everyone who put one in.</p>
-          <p>The interest form above is still open, and it's the best thing to do if you're finding us now. It puts you on our roster and announcements list, so you'll hear from us first when a spot opens up mid-season and when applications reopen for next year.</p>
-          <ul class="contact-list" style="margin-top:24px">
-            <li>
-              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-              <span><span class="lbl">What's next</span><br><strong>Applications reopen next season</strong><br>Watch the interest list for the date</span>
-            </li>
-            <li>
-              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span><span class="lbl">Questions?</span><br><a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a></span>
-            </li>
-          </ul>
-          <div class="btn-row" style="margin-top:24px;flex-wrap:wrap">
-            <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener" class="btn btn-primary">Join the interest list
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="internal.html#calendar" class="btn btn-outline">See upcoming events</a>
-          </div>
-        <div class="split-media reveal">
-          <img src="images/competition/ig-2.jpg" alt="The Windpack team together">
-        </div>
+      <h2>Not on the team yet?</h2>
+      <p>These links are for members. Fill out the interest form and we'll get you added.</p>
+      <div class="btn-row">
+        <a href="join.html" class="btn btn-ghost btn-lg">Join Windpack</a>
+        <a href="https://www.instagram.com/ncstatewind" target="_blank" rel="noopener" class="btn btn-dark btn-lg">Follow @ncstatewind</a>
       </div>
     </div>
   </section>

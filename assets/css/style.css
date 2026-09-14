@@ -528,6 +528,9 @@ strong{color:var(--ink);font-weight:700}
 .tv-result-txt span{color:var(--muted);font-size:.95rem}
 
 .doc-list{display:grid;gap:12px}
+.doc-grid{grid-template-columns:repeat(2,1fr);max-width:940px;margin:0 auto}
+@media (max-width:640px){.doc-grid{grid-template-columns:1fr}}
+.doc-logo{flex:0 0 auto;width:32px;height:32px;object-fit:contain}
 .doc{
   display:flex;align-items:center;gap:16px;padding:15px 20px;background:#fff;
   border:1px solid var(--line);border-radius:var(--radius);

@@ -24,7 +24,7 @@ The site is built with static HTML, CSS, and vanilla JavaScript and is hosted wi
 | `team.html` | Member profiles and team structure |
 | `turbine.html` | Turbine development and club history |
 | `competition.html` | Collegiate Wind Competition overview |
-| `events.html` | Meetings, events, and embedded calendar |
+| `internal.html` | Member links (Notion, Slack, Drive) and team calendar |
 | `sponsors.html` | Sponsorship information and resources |
 | `join.html` | Recruitment information and interest form |
 | `assets/css/style.css` | Current site styles |

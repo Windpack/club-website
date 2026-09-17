@@ -389,7 +389,7 @@ def page_who(c):
         para(c, body, x + 14, y - 46, cw - 28, size=8.9, leading=12.4, color=MUTED)
     y -= ch + 26
 
-    stats = [("3", "Specialized teams"), ("25+", "Active members"),
+    stats = [("3", "Specialized teams"), ("30+", "Active members"),
              ("2025", "Founded"), ("1st", "Season complete")]
     sw = (colw - 3 * 12) / 4.0
     sh = 64

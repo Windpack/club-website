@@ -27,41 +27,114 @@
   }
 
   /* ---- Hero carousel ---- */
+  // Each slide runs a pan/zoom animation lasting exactly DELAY ms; the slide
+  // changes when that motion ends. One timer, always cleared before it is set,
+  // and no hover pause (a cursor resting on the hero used to freeze slide 1).
   var hero = document.querySelector("[data-carousel]");
   if (hero) {
     var slides = Array.prototype.slice.call(hero.querySelectorAll(".hero-slide"));
     var dotWrap = hero.querySelector(".hero-dots");
-    var i = 0, timer = null, DELAY = 6000;
+    var i = 0, timer = null, DELAY = 7000;
+    hero.style.setProperty("--hero-ms", DELAY + "ms");
 
     var dots = slides.map(function (_, idx) {
       var b = document.createElement("button");
       b.setAttribute("aria-label", "Go to slide " + (idx + 1));
-      b.addEventListener("click", function () { go(idx); restart(); });
+      b.addEventListener("click", function () { show(idx); });
       if (dotWrap) dotWrap.appendChild(b);
       return b;
     });
 
+    function restartMotion(el) {
+      el.style.animation = "none";
+      void el.offsetWidth; // force reflow so the animation starts from frame 0
+      el.style.animation = "";
+    }
     function show(n) {
+      n = (n + slides.length) % slides.length;
+      restartMotion(slides[n]);
       slides.forEach(function (s, idx) { s.classList.toggle("active", idx === n); });
       dots.forEach(function (d, idx) { d.classList.toggle("active", idx === n); });
       i = n;
+      clearTimeout(timer);
+      if (slides.length > 1) timer = setTimeout(function () { show(i + 1); }, DELAY);
     }
-    function go(n) { show((n + slides.length) % slides.length); }
-    function next() { go(i + 1); }
-    function start() { if (slides.length > 1) timer = setInterval(next, DELAY); }
-    function restart() { clearInterval(timer); start(); }
 
     var prevBtn = hero.querySelector(".hero-arrow.prev");
     var nextBtn = hero.querySelector(".hero-arrow.next");
-    if (prevBtn) prevBtn.addEventListener("click", function () { go(i - 1); restart(); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { go(i + 1); restart(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { show(i - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { show(i + 1); });
 
-    hero.addEventListener("mouseenter", function () { clearInterval(timer); });
-    hero.addEventListener("mouseleave", start);
+    // Background tabs throttle timers but pause animations; resync on return.
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) clearTimeout(timer); else show(i);
+    });
 
     show(0);
-    start();
   }
+
+  /* ---- Hero typewriter: design, build, test (test gets bolded) ---- */
+  var typeEl = document.querySelector("[data-type-words]");
+  var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (typeEl && !calm) {
+    var words = typeEl.getAttribute("data-type-words").split(",");
+    var TYPE = 110, ERASE = 60;
+    var wait = function (ms) { return new Promise(function (r) { setTimeout(r, ms); }); };
+    var typeWord = function (w) {
+      var k = 0;
+      return (function step() {
+        if (k > w.length) return Promise.resolve();
+        typeEl.textContent = w.slice(0, k++);
+        return wait(TYPE).then(step);
+      })();
+    };
+    var eraseWord = function () {
+      return (function step() {
+        var t = typeEl.textContent;
+        if (!t) return Promise.resolve();
+        typeEl.textContent = t.slice(0, -1);
+        return wait(ERASE).then(step);
+      })();
+    };
+    var runWord = function (idx) {
+      var w = words[idx];
+      var last = idx === words.length - 1;
+      var chain = typeWord(w).then(function () { return wait(last ? 450 : 1000); });
+      if (last) {
+        chain = chain
+          .then(function () { typeEl.classList.add("is-bold"); return wait(1000); })
+          .then(function () { typeEl.classList.remove("is-bold"); return wait(600); });
+      }
+      return chain.then(eraseWord).then(function () { return wait(350); })
+        .then(function () { return runWord((idx + 1) % words.length); });
+    };
+    typeEl.textContent = "";
+    wait(400).then(function () { runWord(0); });
+  }
+
+  /* ---- Spin-and-grow transition for turbine links ---- */
+  document.querySelectorAll("[data-spin-link]").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      if (calm || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      e.preventDefault();
+      link.classList.add("is-spinning");
+      document.body.classList.add("is-leaving");
+      try { sessionStorage.setItem("spinIn", "1"); } catch (err) {}
+      setTimeout(function () { window.location.href = link.href; }, 650);
+    });
+  });
+  try {
+    if (sessionStorage.getItem("spinIn") === "1") {
+      sessionStorage.removeItem("spinIn");
+      document.body.classList.add("page-in");
+    }
+  } catch (err) {}
+  // Coming back via the back button restores the page from cache mid-animation.
+  window.addEventListener("pageshow", function (e) {
+    if (!e.persisted) return;
+    document.body.classList.remove("is-leaving");
+    document.querySelectorAll(".is-spinning").forEach(function (el) { el.classList.remove("is-spinning"); });
+  });
 
   /* ---- Turbine development year tabs ---- */
   var tv = document.querySelector("[data-turbine-versions]");

@@ -232,6 +232,46 @@
     }
   }
 
+  /* ---- Easter egg: clicking Aiden Christmas lets it snow ---- */
+  var egg = document.querySelector("[data-xmas]");
+  if (egg) {
+    var snowing = false;
+    egg.addEventListener("click", function () {
+      if (snowing) return;
+      snowing = true;
+      egg.classList.add("is-festive");
+      var toast = document.createElement("div");
+      toast.className = "xmas-toast";
+      toast.textContent = "Merry Christmas from Windpack";
+      document.body.appendChild(toast);
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var snow = document.createElement("div");
+      snow.className = "xmas-snow";
+      snow.setAttribute("aria-hidden", "true");
+      for (var n = 0; n < (reduce ? 0 : 90); n++) {
+        var f = document.createElement("span");
+        var star = n % 7 === 0;
+        f.className = "xmas-flake";
+        f.textContent = star ? "\u2605" : "\u2744";
+        f.style.left = Math.random() * 100 + "vw";
+        f.style.fontSize = (10 + Math.random() * 18) + "px";
+        f.style.opacity = (0.55 + Math.random() * 0.45).toFixed(2);
+        f.style.animationDuration = (3.5 + Math.random() * 3) + "s";
+        f.style.animationDelay = (Math.random() * 2.5) + "s";
+        f.style.setProperty("--drift", (Math.random() * 120 - 60) + "px");
+        if (star) f.style.color = n % 2 ? "#c8102e" : "#1a7f37";
+        snow.appendChild(f);
+      }
+      document.body.appendChild(snow);
+      setTimeout(function () {
+        snow.remove();
+        toast.remove();
+        egg.classList.remove("is-festive");
+        snowing = false;
+      }, 7000);
+    });
+  }
+
   /* ---- Current year in footer ---- */
   var yr = document.querySelector("[data-year]");
   if (yr) yr.textContent = new Date().getFullYear();

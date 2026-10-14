@@ -187,6 +187,7 @@ strong{color:var(--ink);font-weight:700}
 .sponsor-logo{display:flex;flex-direction:column;align-items:center;gap:12px;width:300px;max-width:100%;padding:28px 24px 20px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;text-align:center}
 .sponsor-logo img{width:100%;max-width:240px;height:auto}
 .sponsor-logo span{font-size:.88rem;color:var(--muted)}
+.sponsor-logo .sponsor-tier{align-self:flex-start;font-family:"Roboto Condensed",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:999px;color:#4a4a50;background:linear-gradient(135deg,#ececee,#c9c9cf);border:1px solid #b9b9bf}
 .sponsor-logo:hover{border-color:var(--ink)}
 
 .tick{list-style:none;margin:16px 0 22px;display:grid;gap:10px}

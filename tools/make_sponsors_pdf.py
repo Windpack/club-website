@@ -62,7 +62,7 @@ BENEFITS = [
     ("Social media thank-you post",        1, 1, 1),
     ("End-of-season recap report",         1, 1, 1),
     ("Logo on team apparel",               0, 1, 1),
-    ("Logo on competition banner",         0, 1, 1),
+    ("Logo on competition poster board",         0, 1, 1),
     ("Access to member resume book",       0, 1, 1),
     ("Premium logo on the turbine",        0, 0, 1),
     ("Dedicated info session / lab visit", 0, 0, 1),
@@ -575,7 +575,7 @@ def page_outcomes(c):
     perks = [
         ("Recruiting access", "Resume book access and first look at members entering the workforce."),
         ("On-campus presence", "Info sessions and lab visits with a team that already builds hardware."),
-        ("Brand visibility", "Logo on the turbine, apparel, competition banner, and windpack.club."),
+        ("Brand visibility", "Logo on the turbine, apparel, competition poster board, and windpack.club."),
     ]
     cw = (colw - 2 * 14) / 3.0
     ch = 104

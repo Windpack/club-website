@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Turbine &amp; History | Windpack</title>
-  <meta name="description" content="The engineering behind Windpack's wind turbine - blades, drivetrain, power electronics, and controls - plus the story of NC State's team." />
+  <meta name="description" content="How Windpack's 2026 competition wind turbine works, what broke along the way, the full spec sheet and design report, and the history of NC State's team." />
   <link rel="icon" type="image/png" href="images/WWECLogoRed.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,67 +36,18 @@
   <!-- ===== Page hero ===== -->
   <section class="page-hero" style="background-image:linear-gradient(rgba(12,12,14,.45),rgba(12,12,14,.45)),url('images/competition/turbine-review.jpg')">
     <div class="container">
-      <span class="kicker">From blade to grid</span>
       <h1>Turbine &amp; History</h1>
-      <p>The engineering behind our wind turbine - and the story of how NC State's team came together to build it.</p>
+      <p>What we built for the 2026 Collegiate Wind Competition, how it works, and what went wrong along the way.</p>
     </div>
   </section>
 
-  <!-- ===== Intro ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker">The machine</span>
-        <h2>A complete turbine, built to compete</h2>
-        <p>For the Collegiate Wind Competition, teams design a small-scale turbine that has to start up, produce power, and survive a controlled wind-tunnel test - all while meeting strict safety rules. Every subsystem below is designed, built, and tested by students.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== Design process split ===== -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="split reverse">
-        <div class="split-media reveal">
-          <img src="images/competition/turbine-review.jpg" alt="Windpack reviewing design work at competition">
-        </div>
-        <div class="split-body reveal">
-          <span class="kicker">How it comes together</span>
-          <h2>Designed, built &amp; tested by students</h2>
-          <p>Our turbine starts as sketches and CAD, moves through prototyping and bench testing, and ends in the wind tunnel. Along the way, the Mechanical, Electrical, and Project Development teams iterate together - trading data, fixing what breaks, and tightening the design for competition.</p>
-          <ul class="tick">
-            <li><strong>Design</strong> - aerodynamics, CAD, and electrical schematics</li>
-            <li><strong>Build</strong> - fabrication, 3D printing, and circuit assembly</li>
-            <li><strong>Test</strong> - bench tests, tuning, and wind-tunnel validation</li>
-          </ul>
-          <div class="btn-row">
-            <a href="competition.html" class="btn btn-outline">How the competition works
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== Turbine development, year by year ===== -->
-  <!-- ==========================================================================
-       TO FILL IN: every value marked class="spec-value tbd" is a placeholder.
-       Replace the text and drop the "tbd" class to make it render as real data,
-       e.g.  <span class="spec-value">1.05 m</span>
-
+  <!-- ===== Turbines, year by year =====
        TO ADD A YEAR: copy one .tv-tab button and its matching .tv-panel, bump
        the year, and keep the id/aria-controls pair in sync (tab-2028 / tv-2028).
        Whichever .tv-tab carries class="active" is the one shown on load.
        ========================================================================== -->
   <section class="section" id="development">
     <div class="container">
-      <div class="section-head">
-        <span class="kicker">Year by year</span>
-        <h2>Turbine development</h2>
-        <p>Every competition cycle we rebuild the turbine around what the last one taught us. Pick a year to see the machine, its specifications, and how it performed.</p>
-      </div>
-
       <div class="tv" data-turbine-versions>
         <div class="tv-tabs" role="tablist" aria-label="Turbine by year">
           <button class="tv-tab active" role="tab" id="tab-2026" aria-controls="tv-2026" aria-selected="true">
@@ -111,91 +62,183 @@
 
         <!-- ---------- 2026 ---------- -->
         <div class="tv-panel active" id="tv-2026" role="tabpanel" aria-labelledby="tab-2026">
-          <div class="tv-top">
-            <div class="tv-media">
-              <!-- Replace with a photo of the 2026 turbine when you have one:
-                   <img src="images/turbines/2026.jpg" alt="The 2026 Windpack turbine"> -->
-              <div class="tv-ph">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M9 21h6"/><circle cx="12" cy="11" r="1.6"/><path d="M12 9.4V3"/><path d="M13.4 11.8l5.6 3.2"/><path d="M10.6 11.8L5 15"/></svg>
-                <span>Photo of the 2026 turbine goes here</span>
-              </div>
-            </div>
-            <div class="tv-intro">
-              <span class="tv-status done">Competed May 2026</span>
-              <h3>Our first competition turbine</h3>
-              <p>A 45 cm horizontal-axis turbine designed and built from a clean sheet in a single semester, around three principles: modularity, simplicity, and reusability. Three 3D-printed ABS blades on an A18 airfoil drive a direct-coupled D6374 brushless generator, with active collective pitch and a fail-safe three-phase short-circuit brake.</p>
+
+          <div class="tb-intro">
+            <span class="tv-status done">Competed May 2026</span>
+            <h2>Our first turbine</h2>
+            <p class="lead">A 45 cm, three-blade turbine on a welded steel tower, designed and built in a single semester. It placed 6th of 10 at the 2026 Collegiate Wind Competition.</p>
+            <p>We did not start from nothing. We read the design reports from the 2025 winners (Cal Maritime, Cal Poly, and CU Boulder), borrowed the ideas that fit a first-year team, and kept everything as simple and as easy to take apart as we could.</p>
+          </div>
+
+          <!-- PHOTO: when there is a photo of the 2026 turbine, put it right here:
+               <img class="tb-photo" src="images/turbines/2026.jpg" alt="The 2026 Windpack turbine"> -->
+
+          <div class="tb-facts">
+            <div class="tb-fact"><span class="tb-fact-num">45 cm</span><span class="tb-fact-label">Rotor diameter, with three blades</span></div>
+            <div class="tb-fact"><span class="tb-fact-num">18 cm</span><span class="tb-fact-label">Blade length, 3D-printed in ABS plastic</span></div>
+            <div class="tb-fact"><span class="tb-fact-num">3,500 RPM</span><span class="tb-fact-label">Top rotor speed</span></div>
+            <div class="tb-fact"><span class="tb-fact-num">5 to 11 m/s</span><span class="tb-fact-label">Wind it makes power in, about 11 to 25 mph</span></div>
+            <div class="tb-fact"><span class="tb-fact-num">13 m/s</span><span class="tb-fact-label">Wind it is built to survive, about 29 mph</span></div>
+            <div class="tb-fact"><span class="tb-fact-num">6th of 10</span><span class="tb-fact-label">Collegiate Wind Competition 2026</span></div>
+          </div>
+
+          <div class="tb-block">
+            <h3 class="tb-h3">How it works</h3>
+            <div class="tb-how">
+              <figure class="tb-diagram">
+                <svg viewBox="0 0 380 440" role="img" aria-label="Front view sketch of the turbine: three blades on a central hub, on top of a tower with a round base. Numbers 1 to 4 mark the blades, hub, generator, and tower.">
+                  <circle cx="190" cy="170" r="150" fill="none" stroke="#c4c4cb" stroke-width="1.5" stroke-dasharray="5 6"/>
+                  <rect x="126" y="412" width="128" height="10" rx="2" fill="#8d8d96"/>
+                  <rect x="184" y="170" width="12" height="244" fill="#a9a9b1"/>
+                  <g fill="#161616">
+                    <path d="M186 143 C176 120 178 80 189 23 C194 70 200 118 194 143 Z"/>
+                    <path d="M186 143 C176 120 178 80 189 23 C194 70 200 118 194 143 Z" transform="rotate(120 190 170)"/>
+                    <path d="M186 143 C176 120 178 80 189 23 C194 70 200 118 194 143 Z" transform="rotate(240 190 170)"/>
+                  </g>
+                  <circle cx="190" cy="170" r="27" fill="#cc0000"/>
+                  <circle cx="190" cy="170" r="6" fill="#161616"/>
+                  <text x="72" y="322" text-anchor="middle" font-family="Roboto Slab, Georgia, serif" font-size="14" fill="#6c6c70">45 cm across</text>
+                  <g stroke="#cc0000" stroke-width="1.5">
+                    <line x1="198" y1="78" x2="232" y2="62"/>
+                    <line x1="212" y1="158" x2="252" y2="140"/>
+                    <line x1="168" y1="160" x2="130" y2="140"/>
+                    <line x1="196" y1="372" x2="232" y2="372"/>
+                  </g>
+                  <g font-family="Roboto Slab, Georgia, serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">
+                    <circle cx="244" cy="57" r="14" fill="#cc0000"/><text x="244" y="62">1</text>
+                    <circle cx="264" cy="135" r="14" fill="#cc0000"/><text x="264" y="140">2</text>
+                    <circle cx="118" cy="134" r="14" fill="#cc0000"/><text x="118" y="139">3</text>
+                    <circle cx="246" cy="372" r="14" fill="#cc0000"/><text x="246" y="377">4</text>
+                  </g>
+                </svg>
+                <figcaption>Front view. A sketch, not to scale.</figcaption>
+              </figure>
+
+              <ol class="tb-parts">
+                <li>
+                  <span class="tb-n" aria-hidden="true">1</span>
+                  <div>
+                    <h4>Blades</h4>
+                    <p>Three blades, each 18 cm long and 3D-printed in ABS plastic. Their cross-section is a shape called the A18 airfoil. We compared several shapes in simulation and picked it because it makes a lot of lift for very little drag.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="tb-n" aria-hidden="true">2</span>
+                  <div>
+                    <h4>Hub and pitch</h4>
+                    <p>A small gearmotor inside the hub twists all three blades at once through a set of bevel gears. Changing the blade angle changes how much of the wind the blades catch.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="tb-n" aria-hidden="true">3</span>
+                  <div>
+                    <h4>Generator</h4>
+                    <p>A brushless motor run backwards as a generator, mounted right behind the hub. The rotor bolts straight to it with no gearbox in between, and it puts out about 1 volt for every 150 RPM.</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="tb-n" aria-hidden="true">4</span>
+                  <div>
+                    <h4>Tower</h4>
+                    <p>A carbon steel pipe TIG-welded to a steel base disc that bolts to the wind tunnel floor. The generator rides on an aluminum rail clamped to the top, so we can slide it to balance the turbine. We sized the tower so it naturally vibrates at 61.2 Hz, just above the 58.3 turns per second the rotor makes at top speed. That way the rotor never reaches the speed that would set the tower shaking.</p>
+                  </div>
+                </li>
+              </ol>
             </div>
           </div>
 
-          <div class="tv-block">
-            <h4 class="tv-sub">Competition result</h4>
-            <div class="tv-result">
-              <div class="tv-result-num">6<span>th</span></div>
-              <div class="tv-result-txt">
-                <strong>out of 10 teams</strong>
-                <span>Collegiate Wind Competition 2026, in our first year as a team.</span>
-              </div>
+          <div class="tb-block">
+            <h3 class="tb-h3">From wind to electricity</h3>
+            <ol class="tb-path">
+              <li><strong>Wind</strong><span>5 to 11 m/s</span></li>
+              <li><strong>Rotor</strong><span>Spins at up to 3,500 RPM</span></li>
+              <li><strong>Generator</strong><span>Makes three-phase AC</span></li>
+              <li><strong>Rectifier</strong><span>Turns the AC into DC</span></li>
+              <li><strong>MPPT</strong><span>Keeps the turbine at its best load</span></li>
+              <li><strong>Load</strong><span>A 5 ohm, 250 W resistor</span></li>
+            </ol>
+            <div class="tb-text">
+              <p>The power coming out of the generator rises and falls with every gust. A rectifier turns it into DC. Then a maximum power point tracker (MPPT) keeps adjusting how hard the turbine is loaded, so it pulls as much power out of the wind as it can. Ours is a solar MPPT that EasySun donated. The power ends up as heat in a large resistor, which stands in for whatever the turbine would be powering.</p>
             </div>
           </div>
 
-          <div class="tv-block">
-            <h4 class="tv-sub">Rotor &amp; mechanical</h4>
-            <div class="spec-grid">
-              <div class="spec"><span class="spec-label">Configuration</span><span class="spec-value">45 cm HAWT</span></div>
-              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value">3</span></div>
-              <div class="spec"><span class="spec-label">Airfoil</span><span class="spec-value">A18</span></div>
-              <div class="spec"><span class="spec-label">Blade length</span><span class="spec-value">0.18 m</span></div>
-              <div class="spec"><span class="spec-label">Blade material</span><span class="spec-value">3D-printed ABS</span></div>
-              <div class="spec"><span class="spec-label">Hub radius</span><span class="spec-value">0.04 m</span></div>
-              <div class="spec"><span class="spec-label">Pitch system</span><span class="spec-value">Active collective, bevel gear</span></div>
-              <div class="spec"><span class="spec-label">Pitch actuator</span><span class="spec-value">Pololu 499:1 gearmotor</span></div>
-              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value">Direct drive</span></div>
-              <div class="spec"><span class="spec-label">Max rotor speed</span><span class="spec-value">3,500 RPM</span></div>
-              <div class="spec"><span class="spec-label">Tower</span><span class="spec-value">TIG-welded carbon steel</span></div>
-              <div class="spec"><span class="spec-label">Tower natural freq.</span><span class="spec-value">61.2 Hz</span></div>
+          <div class="tb-block">
+            <h3 class="tb-h3">The controller and the brake</h3>
+            <div class="tb-text">
+              <p>An Arduino Uno watches the turbine's voltage and current and decides when to change the blade angle or hit the brake.</p>
+              <p>The brake works by connecting all three generator wires together. That makes the generator fight its own rotation and stops the rotor. It is wired to fail safe: the Arduino has to keep sending a signal to hold the brake off, so if the controller loses power or a wire breaks, the turbine stops by itself.</p>
             </div>
           </div>
 
-          <div class="tv-block">
-            <h4 class="tv-sub">Electrical &amp; control</h4>
-            <div class="spec-grid">
-              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value">D6374, 150 kV</span></div>
-              <div class="spec"><span class="spec-label">Pole pairs</span><span class="spec-value">7</span></div>
-              <div class="spec"><span class="spec-label">Operating range</span><span class="spec-value">5 to 11 m/s</span></div>
-              <div class="spec"><span class="spec-label">Survival speed</span><span class="spec-value">13 m/s</span></div>
-              <div class="spec"><span class="spec-label">Rectification</span><span class="spec-value">3-phase rectifier</span></div>
-              <div class="spec"><span class="spec-label">Load optimization</span><span class="spec-value">MPPT controller</span></div>
-              <div class="spec"><span class="spec-label">Load sink</span><span class="spec-value">5 &#937;, 250 W resistor</span></div>
-              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value">Arduino Uno R3</span></div>
-              <div class="spec"><span class="spec-label">Telemetry</span><span class="spec-value">INA226 over I&sup2;C</span></div>
-              <div class="spec"><span class="spec-label">Motor driver</span><span class="spec-value">TI L293DNE</span></div>
-              <div class="spec"><span class="spec-label">Isolation</span><span class="spec-value">6N139/138 optocouplers</span></div>
-              <div class="spec"><span class="spec-label">Braking</span><span class="spec-value">3-phase short circuit</span></div>
-            </div>
-            <p class="tv-note">The brake is a hardware fail-safe: it needs a constant HIGH signal to stay disengaged, so losing controller power or a broken wire drops the line LOW and shorts all three generator phases automatically, with no software in the loop.</p>
-          </div>
-
-          <div class="tv-block">
-            <h4 class="tv-sub">What we changed, and what we learned</h4>
-            <ul class="tick">
-              <li><strong>PLA to ABS blades</strong> - the first printed blades were too brittle to survive the 13 m/s durability case, so we moved to ABS for its impact resistance and flexural strength.</li>
-              <li><strong>Swashplate to bevel gears</strong> - our first pitch mechanism was a helicopter-style swashplate. It was not rigid enough and did not adapt cleanly to three blades, so we replaced it with a bevel gear set sized to fit the 0.04 m hub.</li>
-              <li><strong>Single-phase to three-phase braking</strong> - shorting one phase caused asymmetric magnetic loading, producing violent torque ripple that threatened the drivetrain. Shorting all three balances the braking torque and removed the mechanical shock.</li>
-              <li><strong>Aborted tunnel run</strong> - in our one wind tunnel slot the rotor vibrated badly on spin-up, so we hit the kill switch rather than risk shattering the hub. We traced it to rotor eccentricity from misaligned 3D-printed parts, which meant we did not complete the MPPT power curve or the high-speed brake test.</li>
+          <div class="tb-block">
+            <h3 class="tb-h3">What broke, and what we changed</h3>
+            <ul class="tb-lessons">
+              <li>
+                <h4>PLA blades were too brittle</h4>
+                <p>Our first printed blades would not have survived the 13 m/s test. We switched to ABS, which handles impacts and bending better.</p>
+              </li>
+              <li>
+                <h4>The first pitch mechanism was too flimsy</h4>
+                <p>We started with a helicopter-style swashplate. It was not sturdy enough and was hard to adapt to three blades, so we replaced it with bevel gears that fit inside the 4 cm hub.</p>
+              </li>
+              <li>
+                <h4>Braking on one wire shook the turbine</h4>
+                <p>Our first brake shorted a single generator phase. That loaded the generator unevenly and caused violent vibration. Shorting all three phases at once brakes smoothly.</p>
+              </li>
+              <li>
+                <h4>We aborted our only wind tunnel run</h4>
+                <p>As soon as the rotor spun up, the turbine vibrated far more than we expected, so we hit the kill switch instead of risking the hub. The cause was 3D-printed parts that did not line up, from small mistakes in our CAD. Because of that we never measured the full power curve or tested the brake in high wind.</p>
+              </li>
             </ul>
           </div>
+
+          <details class="tb-specs">
+            <summary>Full spec sheet</summary>
+            <div class="tb-specs-body">
+              <h4 class="tv-sub">Rotor &amp; mechanical</h4>
+              <div class="spec-grid">
+                <div class="spec"><span class="spec-label">Configuration</span><span class="spec-value">45 cm horizontal axis</span></div>
+                <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value">3</span></div>
+                <div class="spec"><span class="spec-label">Airfoil</span><span class="spec-value">A18</span></div>
+                <div class="spec"><span class="spec-label">Blade length</span><span class="spec-value">0.18 m</span></div>
+                <div class="spec"><span class="spec-label">Blade material</span><span class="spec-value">3D-printed ABS</span></div>
+                <div class="spec"><span class="spec-label">Hub radius</span><span class="spec-value">0.04 m</span></div>
+                <div class="spec"><span class="spec-label">Pitch system</span><span class="spec-value">Active collective, 1:1 bevel gears</span></div>
+                <div class="spec"><span class="spec-label">Pitch actuator</span><span class="spec-value">Pololu 499:1 gearmotor</span></div>
+                <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value">Direct drive</span></div>
+                <div class="spec"><span class="spec-label">Max rotor speed</span><span class="spec-value">3,500 RPM (58.3 Hz)</span></div>
+                <div class="spec"><span class="spec-label">Tower</span><span class="spec-value">TIG-welded carbon steel</span></div>
+                <div class="spec"><span class="spec-label">Tower natural frequency</span><span class="spec-value">61.2 Hz</span></div>
+              </div>
+              <h4 class="tv-sub" style="margin-top:28px">Electrical &amp; control</h4>
+              <div class="spec-grid">
+                <div class="spec"><span class="spec-label">Generator</span><span class="spec-value">D6374 brushless, 150 RPM per volt</span></div>
+                <div class="spec"><span class="spec-label">Pole pairs</span><span class="spec-value">7</span></div>
+                <div class="spec"><span class="spec-label">Operating range</span><span class="spec-value">5 to 11 m/s</span></div>
+                <div class="spec"><span class="spec-label">Survival speed</span><span class="spec-value">13 m/s</span></div>
+                <div class="spec"><span class="spec-label">Rectification</span><span class="spec-value">3-phase rectifier</span></div>
+                <div class="spec"><span class="spec-label">Load optimization</span><span class="spec-value">EasySun MPPT controller</span></div>
+                <div class="spec"><span class="spec-label">Load sink</span><span class="spec-value">5 &#937;, 250 W resistor</span></div>
+                <div class="spec"><span class="spec-label">Controller</span><span class="spec-value">Arduino Uno R3</span></div>
+                <div class="spec"><span class="spec-label">Voltage and current sensor</span><span class="spec-value">INA226 over I&sup2;C</span></div>
+                <div class="spec"><span class="spec-label">Pitch motor driver</span><span class="spec-value">TI L293DNE</span></div>
+                <div class="spec"><span class="spec-label">Isolation</span><span class="spec-value">6N139/138 optocouplers</span></div>
+                <div class="spec"><span class="spec-label">Braking</span><span class="spec-value">Fail-safe 3-phase short circuit</span></div>
+              </div>
+            </div>
+          </details>
 
           <!-- Add each year's documents here. Drop the PDF in assets/reports/
                using the pattern windpack-<year>-<document>.pdf and copy one
                .doc block per file. -->
           <div class="tv-block">
-            <h4 class="tv-sub">Documents</h4>
+            <h3 class="tb-h3">The full report</h3>
             <div class="doc-list">
               <a class="doc" href="assets/reports/windpack-2026-design-report.pdf" target="_blank" rel="noopener">
                 <span class="doc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span>
                 <span class="doc-body">
                   <span class="doc-name">2026 Turbine Design Report</span>
-                  <span class="doc-meta">Full technical design, analysis, and testing writeup, CWC26 &middot; PDF, 1.7 MB</span>
+                  <span class="doc-meta">The 14-page report we submitted to the competition &middot; PDF, 1.7 MB</span>
                 </span>
                 <span class="doc-dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span>
               </a>
@@ -205,42 +248,11 @@
 
         <!-- ---------- 2027 ---------- -->
         <div class="tv-panel" id="tv-2027" role="tabpanel" aria-labelledby="tab-2027">
-          <div class="tv-top">
-            <div class="tv-media">
-              <div class="tv-ph">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 13v8"/><path d="M9 21h6"/><circle cx="12" cy="11" r="1.6"/><path d="M12 9.4V3"/><path d="M13.4 11.8l5.6 3.2"/><path d="M10.6 11.8L5 15"/></svg>
-                <span>Renders and build photos will appear here as the design comes together</span>
-              </div>
-            </div>
-            <div class="tv-intro">
-              <span class="tv-status wip">In progress</span>
-              <h3>Second-generation turbine</h3>
-              <p>Our 2027 machine is in design now, built directly on what the first one taught us. We are publishing the targets below as they are locked in, then the as-built numbers once it is on the test stand.</p>
-            </div>
-          </div>
-
-          <div class="tv-block">
-            <h4 class="tv-sub">Design targets</h4>
-            <div class="spec-grid">
-              <div class="spec"><span class="spec-label">Rotor diameter</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade count</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade airfoil</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Blade manufacturing</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Hub &amp; pitch</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Generator</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Drivetrain</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Rated power</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Cut-in wind speed</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Power electronics</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Controller</span><span class="spec-value tbd">TBD</span></div>
-              <div class="spec"><span class="spec-label">Braking &amp; safety</span><span class="spec-value tbd">TBD</span></div>
-            </div>
-            <p class="tv-note">Want to help decide what goes in these boxes? We take new members at the start of each semester. <a href="join.html">See how to join.</a></p>
-          </div>
-
-          <div class="tv-block">
-            <h4 class="tv-sub">Documents</h4>
-            <p class="tv-note">The 2027 design report and technical inspection will be posted here once the season wraps up.</p>
+          <div class="tb-intro">
+            <span class="tv-status wip">In progress</span>
+            <h2>Our second turbine</h2>
+            <p class="lead">The 2027 turbine is being designed now. Its specs go up here once they are settled, and the design report gets posted after the season.</p>
+            <p>We take new members at the start of each semester. <a href="join.html">See how to join.</a></p>
           </div>
         </div>
       </div>
@@ -248,39 +260,37 @@
   </section>
 
   <!-- ===== History ===== -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container">
       <div class="section-head">
-        <span class="kicker">Our history</span>
-        <h2>How Windpack got here</h2>
-        <p>We're a young team with big momentum. Here's the story so far.</p>
+        <h2>Club history</h2>
       </div>
       <div class="prose">
         <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-date">2025 · Founded</div>
-            <h3>Windpack is born</h3>
-            <p>A group of NC State students forms a team to enter the Collegiate Wind Competition, uniting engineering and project development under one mission.</p>
+          <div class="tl-item">
+            <div class="tl-date">2025</div>
+            <h3>Windpack starts</h3>
+            <p>A group of NC State students forms a team to enter the Collegiate Wind Competition.</p>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-date">Fall 2025 · Building the team</div>
-            <h3>Three teams take shape</h3>
-            <p>Mechanical, Electrical, and Project Development teams come together, recruiting members from across majors and starting on the first turbine designs and project plan.</p>
+          <div class="tl-item">
+            <div class="tl-date">Fall 2025</div>
+            <h3>Three teams form</h3>
+            <p>Mechanical, Electrical, and Project Development take shape and recruit their first members.</p>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-date">Spring 2026 · Prototype</div>
-            <h3>From CAD to a working turbine</h3>
-            <p>The team prototypes, builds, and bench-tests the turbine while the Project Development team prepares the siting analysis and business case for the competition deliverables.</p>
+          <div class="tl-item">
+            <div class="tl-date">Spring 2026</div>
+            <h3>The first turbine gets built</h3>
+            <p>The turbine goes from CAD to a finished machine in one semester, while Project Development writes the wind farm proposal.</p>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-date">May 2026 · Nationals</div>
-            <h3>Our first Collegiate Wind Competition</h3>
-            <p>Windpack travels to compete on the national stage - presenting to judges, running the turbine, and representing NC State in our debut appearance.</p>
+          <div class="tl-item">
+            <div class="tl-date">May 2026</div>
+            <h3>Our first competition</h3>
+            <p>Windpack competes at the Collegiate Wind Competition for the first time and finishes 6th of 10.</p>
           </div>
-          <div class="tl-item reveal">
-            <div class="tl-date">Now · What's next</div>
-            <h3>Building toward the next cycle</h3>
-            <p>We're applying everything we learned, growing the team, and engineering an even stronger turbine for the next competition. Want in? <a href="join.html">Join the Pack.</a></p>
+          <div class="tl-item">
+            <div class="tl-date">Now</div>
+            <h3>The second turbine</h3>
+            <p>The 2027 turbine is in design, starting from what the first one taught us.</p>
           </div>
         </div>
       </div>
@@ -290,11 +300,11 @@
   <!-- ===== CTA ===== -->
   <section class="cta">
     <div class="container">
-      <h2>Curious how it all works?</h2>
-      <p>Dig into the competition we build for, or come help design the next turbine.</p>
+      <h2>Want to work on the next one?</h2>
+      <p>We take new members at the start of each semester.</p>
       <div class="btn-row">
-        <a href="competition.html" class="btn btn-ghost btn-lg">The Competition</a>
-        <a href="join.html" class="btn btn-dark btn-lg">Join Windpack</a>
+        <a href="join.html" class="btn btn-ghost btn-lg">Join Windpack</a>
+        <a href="competition.html" class="btn btn-dark btn-lg">The Competition</a>
       </div>
     </div>
   </section>

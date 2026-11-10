@@ -4,12 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Join | Windpack</title>
-  <meta name="description" content="Join Windpack - NC State's Collegiate Wind Competition team. All majors welcome, no experience required. Sign up and apply for a team." />
+  <meta name="description" content="How to join Windpack, NC State's Collegiate Wind Competition team. Applications open at the start of each semester, and the interest form is open all year." />
   <link rel="icon" type="image/png" href="images/WWECLogoRed.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/join.css" />
+  <script>document.documentElement.classList.add("jx-js")</script>
 </head>
 <body>
 
@@ -33,74 +35,200 @@
     </div>
   </header>
 
-  <!-- ===== Page hero ===== -->
-  <section class="page-hero" style="background-image:linear-gradient(rgba(12,12,14,.45),rgba(12,12,14,.55)),url('images/competition/hero-team.jpg')">
-    <div class="container">
-      <span class="kicker">Get involved</span>
-      <h1>Join the Pack</h1>
-      <p>All majors, all experience levels. If you're curious about wind energy, hands-on engineering, or project development - there's a spot for you.</p>
-    </div>
-  </section>
+  <!-- =====================================================================
+       JOIN PAGE. Styles: assets/css/join.css   Script: assets/js/join.js
 
-  <!-- ===== Who can join ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center">
-        <span class="kicker">Who can join</span>
-        <h2>No experience required - just show up</h2>
-        <p>We welcome students from every college and year. Pick the team that excites you, or try a few until something clicks.</p>
-      </div>
-    </div>
-  </section>
+       UPDATE EACH APPLICATION WINDOW (three places, all marked WINDOW):
+         1. the status pill in the hero
+         2. the ticker strip under the hero
+         3. the red tag on step 2
+       ===================================================================== -->
+  <main class="jx">
 
-  <!-- ===== Sign up form ===== -->
-  <section class="section section--alt">
-    <div class="container">
-      <div class="section-head center">
-        <span class="kicker">Step one</span>
-        <h2>Sign up</h2>
-        <p>Fill out the form below and we'll add you to our roster and announcements. Prefer a new tab? <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener">Open the form directly</a>.</p>
+  <!-- ===== Hero: the wind tunnel ===== -->
+  <section class="jx-hero">
+    <canvas class="jx-streaks" aria-hidden="true"></canvas>
+    <div class="jx-hero-inner">
+      <div class="jx-hero-copy">
+        <!-- WINDOW 1 -->
+        <p class="jx-pill"><i></i>Fall 2026 applications closed. Next window: spring 2027</p>
+        <h1 class="jx-h1">Come make<br>some <em>wind.</em></h1>
+        <p class="jx-lead">Windpack designs, builds, and tests a wind turbine every year, then takes it to the Collegiate Wind Competition. No experience needed. We take new members at the start of each semester.</p>
+        <div class="jx-actions">
+          <a href="#interest-form" class="jx-btn">Get on the interest list
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#how" class="jx-textlink">How to get in</a>
+        </div>
       </div>
-      <div class="embed-card" style="max-width:820px;margin:0 auto">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTdRE50ByRVR9bEHnr4Voct58K5T4bUYhn58HaiXguzXJNeA/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Windpack signup form">Loading…</iframe>
-      </div>
-      <div class="btn-row" style="justify-content:center;margin-top:28px">
-        <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Open signup form
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===== Apply this year ===== -->
-  <section class="section">
-    <div class="container">
-      <div class="split">
-        <div class="split-body reveal">
-          <span class="kicker">Step two</span>
-          <h2>Team applications are closed</h2>
-          <p>Applications for this season closed on Friday, Sept 4. Thanks to everyone who put one in.</p>
-          <p>The interest form above is still open, and it's the best thing to do if you're finding us now. It puts you on our roster and announcements list, so you'll hear from us first when a spot opens up mid-season and when applications reopen for next year.</p>
-          <ul class="contact-list" style="margin-top:24px">
-            <li>
-              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
-              <span><span class="lbl">What's next</span><br><strong>Applications reopen next season</strong><br>Watch the interest list for the date</span>
-            </li>
-            <li>
-              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-              <span><span class="lbl">Questions?</span><br><a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a></span>
-            </li>
-          </ul>
-          <div class="btn-row" style="margin-top:24px;flex-wrap:wrap">
-            <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener" class="btn btn-primary">Join the interest list
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-            <a href="internal.html#calendar" class="btn btn-outline">See upcoming events</a>
+      <div class="jx-tunnel" data-tunnel role="img" aria-label="A toy wind tunnel. The turbine spins faster the more you move your mouse or scroll, and brakes at 13 meters per second.">
+        <svg class="jx-turbine" viewBox="0 0 320 400" aria-hidden="true">
+          <ellipse cx="160" cy="392" rx="92" ry="6" fill="rgba(255,255,255,.12)"/>
+          <polygon points="154,158 166,158 173,392 147,392" fill="#d9d9de"/>
+          <rect x="143" y="139" width="34" height="22" rx="6" fill="#f1f1f3"/>
+          <g data-rotor transform="rotate(0 160 150)">
+            <path class="jx-blade" d="M155 148 C146 112 152 58 161 14 C165 58 171 108 167 148 Z"/>
+            <path class="jx-blade" d="M155 148 C146 112 152 58 161 14 C165 58 171 108 167 148 Z" transform="rotate(120 160 150)"/>
+            <path class="jx-blade" d="M155 148 C146 112 152 58 161 14 C165 58 171 108 167 148 Z" transform="rotate(240 160 150)"/>
+            <circle cx="160" cy="150" r="14" fill="#cc0000"/>
+            <circle cx="160" cy="150" r="4.5" fill="#0c0c0e"/>
+          </g>
+        </svg>
+        <div class="jx-read" aria-hidden="true">
+          <div class="jx-read-top">
+            <span class="jx-read-label">Wind speed</span>
+            <span class="jx-read-num"><span data-wind>0.0</span><small>m/s</small></span>
           </div>
-        <div class="split-media reveal">
-          <img src="images/competition/ig-2.jpg" alt="The Windpack team together">
+          <div class="jx-gauge">
+            <span class="jx-needle" data-needle></span>
+            <span class="jx-tick" style="left:33.33%">5<small>starts</small></span>
+            <span class="jx-tick" style="left:73.33%">11</span>
+            <span class="jx-tick" style="left:86.67%">13<small>limit</small></span>
+          </div>
+          <p class="jx-state" data-state>Our 2026 turbine ran from 5 to 11 m/s and was built to survive 13.</p>
+          <p class="jx-trips" data-trips hidden></p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ===== Ticker (WINDOW 2: both copies must match) ===== -->
+  <div class="jx-ticker" aria-hidden="true">
+    <div class="jx-ticker-track">
+      <span>Applications reopen spring 2027</span><b>✦</b>
+      <span>Interest form open all year</span><b>✦</b>
+      <span>Any major</span><b>✦</b>
+      <span>No experience needed</span><b>✦</b>
+      <span>6th of 10 in our first season</span><b>✦</b>
+      <span>Applications reopen spring 2027</span><b>✦</b>
+      <span>Interest form open all year</span><b>✦</b>
+      <span>Any major</span><b>✦</b>
+      <span>No experience needed</span><b>✦</b>
+      <span>6th of 10 in our first season</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- ===== Pick your team ===== -->
+  <section class="jx-sec">
+    <div class="container">
+      <h2 class="jx-h2 jx-rise">Pick your team</h2>
+      <p class="jx-sub jx-rise">Three teams, one entry. You tell us which one you want on the interest form.</p>
+
+      <div class="jx-teams">
+        <div class="jx-rise" style="--d:0">
+          <article class="jx-card jx-card--mech">
+            <span class="jx-card-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.4 11.2C10.3 8 10.9 4.4 12.2 1.5c.9 3 1.5 6.400 .9 9.700z"/><path d="M11.4 11.2C10.3 8 10.9 4.4 12.2 1.5c.9 3 1.500 6.400 .9 9.700z" transform="rotate(120 12 12)"/><path d="M11.4 11.2C10.3 8 10.9 4.4 12.2 1.5c.9 3 1.500 6.400 .9 9.700z" transform="rotate(240 12 12)"/><circle cx="12" cy="12" r="2"/></svg></span>
+            <span class="jx-card-kick">Mechanical</span>
+            <h3>Build the part that spins.</h3>
+            <p>Blades, hub, pitch system, tower. Last season that meant 3D-printed ABS blades, a bevel-gear pitch mechanism, and a TIG-welded steel tower.</p>
+            <ul class="jx-tags"><li>Aero &amp; Blade</li><li>Structure</li><li>Pitch</li></ul>
+            <p class="jx-card-foot">Mostly MAE and MSE majors.</p>
+          </article>
+        </div>
+        <div class="jx-rise" style="--d:1">
+          <article class="jx-card jx-card--elec">
+            <span class="jx-card-ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 2 5 13.5h5.500L9.500 22 19 10h-6z"/></svg></span>
+            <span class="jx-card-kick">Electrical</span>
+            <h3>Turn spin into power.</h3>
+            <p>Generator, power electronics, controls. Last season that meant an Arduino running the turbine, an MPPT controller, and a brake that trips by itself if a wire breaks.</p>
+            <ul class="jx-tags"><li>Controls</li><li>Power &amp; Generator</li></ul>
+            <p class="jx-card-foot">Mostly ECE and CS majors.</p>
+          </article>
+        </div>
+        <div class="jx-rise" style="--d:2">
+          <article class="jx-card jx-card--pd">
+            <span class="jx-card-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6.500-8 12-8 12s-8-5.500-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.800"/></svg></span>
+            <span class="jx-card-kick">Project Development</span>
+            <h3>Plan the whole wind farm.</h3>
+            <p>Where to build it, how much wind the site gets, permitting, the grid connection, and what it all costs. No engineering required.</p>
+            <ul class="jx-tags"><li>Site Assessment</li><li>Environmental &amp; Permitting</li><li>Grid Interconnection</li><li>Supply Chain</li></ul>
+            <p class="jx-card-foot">Any major.</p>
+          </article>
+        </div>
+      </div>
+      <p class="jx-more jx-rise"><a href="team.html">Meet the people on each team</a></p>
+    </div>
+  </section>
+
+  <!-- ===== Photos ===== -->
+  <section class="jx-sec jx-sec--alt">
+    <div class="container">
+      <h2 class="jx-h2 jx-rise">It is not all CAD</h2>
+      <p class="jx-sub jx-rise">Last May we took our first turbine to the Collegiate Wind Competition and finished 6th of 10 in our first season.</p>
+      <div class="jx-snaps jx-rise">
+        <figure class="jx-snap" style="--r:-5deg"><img src="images/competition/about-team.jpg" alt="The Windpack team in front of the Collegiate Wind Competition backdrop" loading="lazy"><figcaption>CWC 2026</figcaption></figure>
+        <figure class="jx-snap" style="--r:3deg"><img src="images/competition/comp-present2.jpg" alt="Windpack members lined up to give their design presentation" loading="lazy"><figcaption>The design presentation</figcaption></figure>
+        <figure class="jx-snap" style="--r:-2deg"><img src="images/competition/ig-7.jpg" alt="The team sharing a big dinner around a round table" loading="lazy"><figcaption>Team dinner</figcaption></figure>
+        <figure class="jx-snap" style="--r:4deg"><img src="images/competition/ig-5.jpg" alt="The team posing around a stone lion statue" loading="lazy"><figcaption>Found a lion</figcaption></figure>
+        <figure class="jx-snap" style="--r:-3deg"><img src="images/competition/ig-8.jpg" alt="The team standing arm in arm on a brick plaza at dusk" loading="lazy"><figcaption>The whole crew</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== How to get in ===== -->
+  <section class="jx-sec jx-sec--dark" id="how">
+    <div class="container">
+      <h2 class="jx-h2 jx-rise">How to get in</h2>
+      <ol class="jx-steps">
+        <li class="jx-step jx-rise" style="--d:0">
+          <span class="jx-step-num" aria-hidden="true">1</span>
+          <h3>Sign the interest form</h3>
+          <p>Six questions, under a minute, open all year. It is how we reach you about everything else.</p>
+        </li>
+        <li class="jx-step jx-rise" style="--d:1">
+          <span class="jx-step-num" aria-hidden="true">2</span>
+          <h3>Apply when the window opens</h3>
+          <p>Twice a year, at the start of the fall and spring semesters. The interest list gets the link before anyone else.</p>
+          <!-- WINDOW 3 -->
+          <span class="jx-tag">Next: start of spring 2027</span>
+        </li>
+        <li class="jx-step jx-rise" style="--d:2">
+          <span class="jx-step-num" aria-hidden="true">3</span>
+          <h3>Meet your sub-team</h3>
+          <p>In your first week you are in our Slack and Notion and sitting down with your sub-team head. Then you get to work.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== The deal ===== -->
+  <section class="jx-sec">
+    <div class="container">
+      <h2 class="jx-h2 jx-rise">The deal</h2>
+      <p class="jx-sub jx-rise">The honest version, so nobody is surprised later.</p>
+      <div class="jx-deal">
+        <div class="jx-rise" style="--d:0"><div class="jx-tile">
+          <h3>Any major. Zero experience.</h3>
+          <p>Nobody shows up already knowing how to build a wind turbine. You do not need a wind or engineering background to apply.</p>
+        </div></div>
+        <div class="jx-rise" style="--d:1"><div class="jx-tile jx-tile--dark">
+          <h3>Undergrads only.</h3>
+          <p>Collegiate Wind Competition rules do not let graduate students work on the entry. Not our call.</p>
+        </div></div>
+        <div class="jx-rise" style="--d:0"><div class="jx-tile jx-tile--red">
+          <h3>Show up.</h3>
+          <p>Go to your sub-team's meetings. Times are on the <a href="internal.html#calendar">Windpack calendar</a>. Miss three without telling your lead and your spot goes to the next person on the interest list.</p>
+        </div></div>
+        <div class="jx-rise" style="--d:1"><div class="jx-tile">
+          <h3>Spots open mid-semester.</h3>
+          <p>Schedules change. When a spot opens between windows, the team lead fills it from the interest list first. A member recommended you? Great. Fill out the same form.</p>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Interest form ===== -->
+  <section class="jx-sec jx-sec--red" id="interest-form">
+    <div class="container">
+      <h2 class="jx-h2 jx-rise">One minute. Six questions.</h2>
+      <p class="jx-sub jx-rise">Prefer a new tab? <a href="https://forms.gle/nWHJaJU2XDMf77av9" target="_blank" rel="noopener">Open the form directly</a>. Questions go to <a href="mailto:windpack-org@ncsu.edu">windpack-org@ncsu.edu</a>.</p>
+      <div class="jx-form jx-rise">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTdRE50ByRVR9bEHnr4Voct58K5T4bUYhn58HaiXguzXJNeA/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" title="Windpack interest form" loading="lazy">Loading…</iframe>
+      </div>
+    </div>
+  </section>
+
+  </main>
 
   <!-- ===== Footer ===== -->
   <footer class="footer">
@@ -152,5 +280,6 @@
   </footer>
 
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/join.js"></script>
 </body>
 </html>
